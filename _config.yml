@@ -29,7 +29,7 @@ paginate: 20
 
 #### Site
 title : ChenDudo's Blog
-tagline: A fresh looking and responsive theme for Jekyll
+tagline: 山外青山楼外楼
 assets: /assets
 url:
 baseurl:
@@ -84,9 +84,9 @@ share_to: true #enable share-to buttons if true
 
 #### Author information
 author:
-  name: Chen Do     ## e.g. wuchong Author name
-  intro_line1:  "Hello."    ## your introduction on the bottom of the page
-  intro_line2:  "This is my blog,believe it or not."  ## the 2nd line
+  name: Blue is color     ## e.g. wuchong Author name
+  intro_line1:  "Hello.ChenDudo 的博客开通啦！欢迎参观"    ## your introduction on the bottom of the page
+  intro_line2:  "本博客将记录工作、学习的点点滴滴."  ## the 2nd line
   weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
   weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
   tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
@@ -110,7 +110,7 @@ toc:
 
 #### Links
 links:
-  码农圈: https://coderq.com
+  CSDN: https://blog.csdn.net/chendu103/
   Jark's Blog: http://wuchong.me
 
 #### Comment
