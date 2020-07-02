@@ -101,7 +101,7 @@ cnzz_tongji:
   siteid:        ## CNZZ统计站点ID
 
 #### 杂项
-ShowCustomFont: true  
+ShowCustomFont: false  ## chendo not found; change at 2020/07/03 06:07  
 fancybox: true        
 totop: true           
 
