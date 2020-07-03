@@ -1,5 +1,5 @@
 ---
-title: [NOte] Markdown Elements
+title: Markdown Elements
 date: 2017-12-24 23:29:08
 tags: [resources, note]
 categories:
@@ -15,7 +15,6 @@ The purpose of this post is to help you make sure all of HTML elements can displ
 
 ![Wallbase - dgnfly (wallbase.cc/wallpaper/1384450)](http://ww1.sinaimg.cn/large/81b78497jw1emfgts2pt4j21hc0u0k1c.jpg)
 
-Etiam luctus mauris at mi sollicitudin quis malesuada nibh porttitor. Vestibulum 
 
 
 
