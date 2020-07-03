@@ -5,24 +5,46 @@ tags: [resources, note]
 categories:
 - turto
 link: http://www.google.com/
-image: http://gastonsanchez.com/images/blog/mathjax_logo.png
-
-photos:
-- http://ww1.sinaimg.cn/mw690/81b78497jw1emfgwkasznj21hc0u0qb7.jpg
-- http://ww3.sinaimg.cn/mw690/81b78497jw1emfgwjrh2pj21hc0u01g3.jpg
-- http://ww2.sinaimg.cn/mw690/81b78497jw1emfgwil5xkj21hc0u0tpm.jpg
-- http://ww3.sinaimg.cn/mw690/81b78497jw1emfgvcdn25j21hc0u0qpa.jpg
-description: Gallery Post Test. 测试图片类文章的显示。
-
+description: This blog contain all markdown elements. 文本元素全集。
 ---
 
 The purpose of this post is to help you make sure all of HTML elements can display properly. If you use CSS reset, don't forget to redefine the style by yourself.
 
 <!-- more -->
 
+
 ![Wallbase - dgnfly (wallbase.cc/wallpaper/1384450)](http://ww1.sinaimg.cn/large/81b78497jw1emfgts2pt4j21hc0u0k1c.jpg)
 
 Etiam luctus mauris at mi sollicitudin quis malesuada nibh porttitor. Vestibulum 
+
+
+
+## 题头元素：
+
+```C 
+
+
+
+/* math logo 显示*/
+image: http://gastonsanchez.com/images/blog/mathjax_logo.png
+
+
+/*图片显示*/
+photos:
+- http://ww1.sinaimg.cn/mw690/81b78497jw1emfgwkasznj21hc0u0qb7.jpg
+- http://ww3.sinaimg.cn/mw690/81b78497jw1emfgwjrh2pj21hc0u01g3.jpg
+- http://ww2.sinaimg.cn/mw690/81b78497jw1emfgwil5xkj21hc0u0tpm.jpg
+- http://ww3.sinaimg.cn/mw690/81b78497jw1emfgvcdn25j21hc0u0qpa.jpg
+
+
+```
+
+
+
+
+
+
+
 
 ## Paragraph
 
