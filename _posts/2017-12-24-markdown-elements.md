@@ -1,10 +1,79 @@
 ---
-layout: post
-title: "MathJax with Jekyll"
-date: 2014-02-16
-categories: opinion
-tags: [resources, jekyll]
+title: [NOte] Markdown Elements
+date: 2017-12-24 23:29:08
+tags: [resources, note]
+categories:
+- turto
+link: http://www.google.com/
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
+
+photos:
+- http://ww1.sinaimg.cn/mw690/81b78497jw1emfgwkasznj21hc0u0qb7.jpg
+- http://ww3.sinaimg.cn/mw690/81b78497jw1emfgwjrh2pj21hc0u01g3.jpg
+- http://ww2.sinaimg.cn/mw690/81b78497jw1emfgwil5xkj21hc0u0tpm.jpg
+- http://ww3.sinaimg.cn/mw690/81b78497jw1emfgvcdn25j21hc0u0qpa.jpg
+description: Gallery Post Test. 测试图片类文章的显示。
+
+---
+
+The purpose of this post is to help you make sure all of HTML elements can display properly. If you use CSS reset, don't forget to redefine the style by yourself.
+
+<!-- more -->
+
+![Wallbase - dgnfly (wallbase.cc/wallpaper/1384450)](http://ww1.sinaimg.cn/large/81b78497jw1emfgts2pt4j21hc0u0k1c.jpg)
+
+Etiam luctus mauris at mi sollicitudin quis malesuada nibh porttitor. Vestibulum 
+
+## Paragraph
+
+Lorem ipsum dolor sit amet, [test link]() consectetur adipiscing elit. **Strong text** pellentesque ligula commodo viverra vehicula. *Italic text* at ullamcorper enim. Morbi a euismod nibh. <u>Underline text</u> non elit nisl. ~~Deleted text~~ tristique, sem id condimentum tempus, metus lectus venenatis mauris, sit amet 
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. `Sed erat diam`,
+
+> Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.
+
+Maecenas ornare arcu at mi suscipit, non molestie tortor ultrices. Aenean 
+
+## List Types
+
+### Definition List (dl)
+
+<dl><dt>Definition List Title</dt><dd>This is a definition list division.</dd></dl>
+
+### Ordered List (ol)
+
+1. List Item 1
+2. List Item 2
+3. List Item 3
+
+### Unordered List (ul)
+
+- List Item 1
+- List Item 2
+- List Item 3
+
+## Table
+
+| Table Header 1 | Table Header 2 | Table Header 3 |
+| --- | --- | --- |
+| Division 1 | Division 2 | Division 3 |
+| Division 1 | Division 2 | Division 3 |
+| Division 1 | Division 2 | Division 3 |
+
+This is a image test post.
+
+![](http://ww1.sinaimg.cn/mw690/81b78497jw1emfgwkasznj21hc0u0qb7.jpg)
+
+![Caption](http://ww3.sinaimg.cn/mw690/81b78497jw1emfgwjrh2pj21hc0u01g3.jpg)
+
+![](http://ww2.sinaimg.cn/mw690/81b78497jw1emfgwil5xkj21hc0u0tpm.jpg)
+
+![Small Picture](http://placehold.it/350x150.jpg)
+
+## Misc Stuff - abbr, acronym, sub, sup, etc.
+
+Lorem <sup>上标</sup> dolor <sub>下标</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr>
+
 ---
 
 One of the rewards of switching my website to [Jekyll](http://jekyllrb.com/) is the
@@ -16,7 +85,7 @@ this one \\( x^2 + y^2 = r^2 \\).
 
 <img class="centered" src="https://www.mathjax.org/badge/mj-logo.svg" />
 
-### What's MathJax?
+## MathJax?
 
 If you check MathJax website [(www.mathjax.org)](http://www.mathjax.org/) you'll see
 that it *is an open source JavaScript display engine for mathematics that works in all
@@ -101,3 +170,12 @@ $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
 will be displayed as
 
 \\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} \\]
+
+
+## emoji
+This is an emoji test. :smile:
+
+:bowtie::smile::laughing::blush::smiley::relaxed::smirk:
+:heart_eyes::kissing_heart::kissing_closed_eyes::flushed::relieved::satisfied::grin:
+
+*From [亂數假文產生器 - Chinese Lorem Ipsum](http://www.richyli.com/tool/loremipsum/)*
