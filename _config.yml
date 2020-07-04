@@ -57,12 +57,12 @@ widgets:
 - links
 - douban
 - github-card
-- rss
+# - rss
 ## provide seven widgets:github-card,category,tag,rss,archive,tagcloud,links,weibo,douban
 
 
 #### RSS
-rss: /atom.xml ## RSS address.
+# rss: /atom.xml ## RSS address.
 
 #### Image
 imglogo:
@@ -110,8 +110,7 @@ toc:
 
 #### Links
 links:
-  CSDN: https://blog.csdn.net/chendu103/
-  Jark's Blog: http://wuchong.me
+  CSDN Blog: https://blog.csdn.net/chendu103/
 
 #### Comment
 duoshuo_shortname:    ## e.g. wuchong      your duoshuo short name.       website: http://duoshuo.com
