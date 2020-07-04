@@ -1,9 +1,9 @@
 ---
 title: Markdown Elements
 date: 2017-12-24 23:29:08
-tags: [resources, note]
+tags: [element]]
 categories:
-- turto
+- 教程
 link: http://www.google.com/
 description: This blog contain all markdown elements. 文本元素全集。
 ---
