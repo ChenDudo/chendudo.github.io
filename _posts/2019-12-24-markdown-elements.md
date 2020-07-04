@@ -1,7 +1,7 @@
 ---
 title: Markdown Elements
 date: 2019-12-24 23:29:08
-tags: [element]]
+tags: [element]
 categories:
 - 教程
 link: http://www.google.com/
