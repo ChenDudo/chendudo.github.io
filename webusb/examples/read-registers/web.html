@@ -23,7 +23,7 @@
 <body>
     <button id="read">Read Registers</button>
 
-    <script type="text/javascript" src="../../dist/dap.umd.js"></script>
+    <script type="text/javascript" src="../../node_modules/dapjs/dist/dap.umd.js"></script>
     <script>
         const count = 16;
 
@@ -46,7 +46,7 @@
 
         document.getElementById("read").onclick = async () => {
             const device = await navigator.usb.requestDevice({
-                filters: [{vendorId: 0xD28}]
+                filters: [{vendorId: 0x2F81}]
             });
             const values = await readRegisters(device, count);
             values.forEach((value, index) => {
