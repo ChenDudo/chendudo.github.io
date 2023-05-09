@@ -1,7 +1,9 @@
 .DS_Store
 .rpt2_cache
-# node_modules
-# dist
+!node_modules
+/node_modules/*
+!/node_modules/dapjs
+dist
 types
 docs
 npm-debug.log
