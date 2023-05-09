@@ -72,7 +72,7 @@ SOFTWARE.
                 // locate debug probe
                 try {
                     device = await navigator.usb.requestDevice({
-                        filters: [ {vendorId: 0xD28} ]
+                        filters: [ {vendorId: 0x2F81} ]
                     });
                 } catch (err) {
                     return

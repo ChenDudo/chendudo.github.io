@@ -107,7 +107,7 @@
                 const dataEl = document.getElementById("data");
                 const resultsEl = document.getElementById("results");
                 const device = await navigator.usb.requestDevice({
-                    filters: [{vendorId: 0xD28}]
+                    filters: [{vendorId: 0x2F81}]
                 });
                 const transport = new DAPjs.WebUSB(device);
                 const hash = await deviceHash(transport, data.value);
