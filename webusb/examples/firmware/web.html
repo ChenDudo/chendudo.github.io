@@ -219,7 +219,8 @@
             let result = ev.target.result;
             console.log('reader oad', result)
           }
-          reader.readAsText(xhr.response.data)
+          console.log(xhr.responseText)
+          reader.readAsText(xhr.responseText)
         }
       };
       
