@@ -207,14 +207,34 @@
     function recory_G0001() {
       alert("此功能开发中！\n您还可以通过下载“出厂固件”，拖拽至 Flash 编程区域即可恢复出厂...");
 
-      var xhr = new XMLHttpRequest();
-      // var url = "https://chendo.gitee.io/webusb/examples/firmware/src/G0001/firmware.hex";
+      const xhr = new XMLHttpRequest();
+      var url = "https://chendo.gitee.io/webusb/examples/firmware/src/G0001/firmware.hex";
       // var url = "./src/G0001/firmware.hex";
-      var url = "C:\\Users\\chendo\\Documents\\_0_MindMotion\\chendo\\webusb\\examples\\firmware\\src\\G0001\\firmware.hex";
+      // var url = "C:\\Users\\chendo\\Documents\\_0_MindMotion\\chendo\\webusb\\examples\\firmware\\src\\G0001\\firmware.hex";
+      xhr.withCredentials = true;
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          console.log(xhr.responseText);
+          const reader = new FileReader()
+          reader.onload = (ev) => {
+            console.log(ev.target.result)
+            let result = ev.target.result;
+            console.log('reader oad', result)
+          }
+          reader.readAsText(xhr.response.data)
+        }
+      };
+      
+      xhr.onreadystatechange = () =>{
+        console.log('read state=>', xhr.readyState)
+      }
+
       xhr.open("GET", url);
-      xhr.responseType = "arraybuffer";
+      // xhr.responseType = "arraybuffer";
       xhr.send();
+
       setStatus("Get Remote Data ..."); 
+      
       xhr.onreadystatechange = function () {
         console.log("xhr.readyState=" + xhr.readyState);
         console.log("xhr.status=" + xhr.status);
