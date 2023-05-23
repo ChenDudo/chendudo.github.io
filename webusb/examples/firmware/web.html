@@ -205,50 +205,43 @@
     function recory_G0001() {
       alert("此功能开发中！\n您还可以通过下载“出厂固件”，拖拽至 Flash 编程区域即可恢复出厂...");
 
-      var reader = new FileReader( );
       const xhr = new XMLHttpRequest();
-
       var url = "https://chendudo.github.io/webusb/examples/firmware/src/G0001/firmware.hex";
       // var url = "./src/G0001/firmware.hex";
       // var url = "C:\\Users\\chendo\\Documents\\_0_MindMotion\\chendo\\webusb\\examples\\firmware\\src\\G0001\\firmware.hex";
       xhr.withCredentials = true;
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          console.log(xhr.responseText);
+          const reader = new FileReader()
+          reader.onload = (ev) => {
+            console.log('ev', ev.target.result)
+            let result = ev.target.result;
+            console.log('reader oad', result)
+          }
+          const resType = Object.prototype.tostring.call(response.data)
+          console.log('xhr read as text', resType, xhr.responseText)
+          reader.readAsText(xhr.responseText)
+        }
+      };
+      
+      xhr.onreadystatechange = () =>{
+        console.log('read state=>', xhr.readyState)
+      }
+
       xhr.open("GET", url);
-
-      xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-
       // xhr.responseType = "arraybuffer";
-      xhr.send(reader.result);
+      xhr.send();
+
       setStatus("Get Remote Data ..."); 
 
-      // xhr.onload = () => {
-      //   if (xhr.status === 200) {
-      //     console.log(xhr.responseText);
-      //     const reader = new FileReader()
-      //     reader.onload = (ev) => {
-      //       console.log('ev', ev.target.result)
-      //       let result = ev.target.result;
-      //       console.log('reader oad', result)
-      //     }
-      //     const resType = Object.prototype.tostring.call(response.data)
-      //     console.log('xhr read as text', resType, xhr.responseText)
-      //     reader.readAsText(xhr.responseText)
-      //   }
-      // };
-      
-      // xhr.onreadystatechange = () =>{
-      //   console.log('read state=>', xhr.readyState)
-      // }
-
       xhr.onreadystatechange = function () {
-        // console.log("xhr.readyState=" + xhr.readyState);
-        // console.log("xhr.status=" + xhr.status);
+        console.log("xhr.readyState=" + xhr.readyState);
+        console.log("xhr.status=" + xhr.status);
         if (xhr.readyState === 4 && xhr.status === 200) {
           // console.log(xhr.responseText);
           setStatus("Get Remote Data Finish ..."); 
-
-          reader.readAsBinarwstring(textDetail);
-
-          // let textDetail = xhr.responseText;
+          let textDetail = xhr.responseText;
           setImage(textDetail);
           selectDevice();
         }
