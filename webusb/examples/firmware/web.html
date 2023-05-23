@@ -215,11 +215,12 @@
           console.log(xhr.responseText);
           const reader = new FileReader()
           reader.onload = (ev) => {
-            console.log(ev.target.result)
+            console.log('ev', ev.target.result)
             let result = ev.target.result;
             console.log('reader oad', result)
           }
-          console.log(xhr.responseText)
+          const resType = Object.prototype.tostring.call(response.data)
+          console.log('xhr read as text', resType, xhr.responseText)
           reader.readAsText(xhr.responseText)
         }
       };
