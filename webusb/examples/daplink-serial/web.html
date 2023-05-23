@@ -20,18 +20,33 @@
 
 <!DOCTYPE html>
 <html>
+    <head>
+    </head>
+
+
 <body>
     <button id="connect">Connect</button>
+    <button id="disConnect">DisConnect</button>
+    <button id="send">Send</button>
+
+
     <div id="results" style="white-space: pre;" />
+    <!-- <div id="text" style="white-space: pre;" /> -->
 
     <script type="text/javascript" src="../../dist/dap.umd.js"></script>
     <script>
 
+        var resultsEl = null;
+        var device = null;
+        var transport = null;
+        var target = null;
+
+        resultsEl = document.getElementById("results");
+
         // Listen to serial output from the device
         const listen = async (device, resultsEl) => {
-            const transport = new DAPjs.WebUSB(device);
-            const target = new DAPjs.DAPLink(transport);
-
+            transport = new DAPjs.WebUSB(device);
+            target = new DAPjs.DAPLink(transport);
             target.on(DAPjs.DAPLink.EVENT_SERIAL_DATA, data => {
                 resultsEl.innerHTML += `${data}`;
             });
@@ -45,13 +60,21 @@
         };
 
         document.getElementById("connect").onclick = async () => {
-            const resultsEl = document.getElementById("results");
-            const device = await navigator.usb.requestDevice({
-                filters: [{vendorId: 0x2F81}]
-            });
-
+            try {
+                device = await navigator.usb.requestDevice({
+                    filters: [{vendorId: 0x2F81}]
+                });
+            } catch (err) {
+                return
+            };
             listen(device, resultsEl);
         };
+
+        document.getElementById("disConnect").onclick = async()=>{
+            resultsEl.innerHTML += `Try to disconnect....\n`;
+            await target.disconnect();
+        }
+
     </script>
 </body>
 </html>
