@@ -1,0 +1,221 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #d7ecfb;
+    background-color: #072b44;
+    text-align: center;
+}
+
+
+ul {
+    font-family: font-family;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #11354E;
+    position: sticky;
+    top: 0px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #d7ecfb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(52, 129, 243);
+}
+
+
+h1 {
+    font-family: font-family;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+a:link {
+    color: #d7ecfb;
+}
+
+a:visited {
+    color: #d7ecfb;
+}
+
+a:hover {
+    color: #d7ecfb;
+}
+
+a:active {
+    color: #d7ecfb;
+}
+
+
+
+table,
+td {
+    font-family: font-family;
+    border: 1px solid rgb(52, 129, 243);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+
+
+
+
+
+
+button {
+    border-style: none;
+    background-color: transparent;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+#choosebutton {
+    font-size: 12px;
+    color: inherit;
+    margin: 20px auto;
+    border: 0px;
+    background-color: #1b679c;
+    height: 30px;
+    padding: 0 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+#choosebutton:hover {
+    background: #2674ab;
+}
+
+
+#float-btn {
+    /* 设置形状及阴影 */
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #CCFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    /* 使img元素居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 设置按钮的位置 */
+    position: fixed;
+    right: 25px;
+    top: 10px;
+
+    /* 设置过渡属性 */
+    transition: width 0.5s, height 0.5s;
+}
+
+#float-btn:hover {
+    /* 鼠标悬停时 */
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    color: #f4511e;
+    /* background-color: #f4511e; */
+}
+
+#float-btn:active {
+    /* 鼠标点击时 */
+    background-color: gray;
+}
+
+
+#drop {
+    position: relative;
+    margin: 20px auto;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 100px 20px 80px 20px;
+    outline: 2px dashed #072b44;
+    outline-offset: -10px;
+}
+
+#drop.hover {
+    outline-offset: -10px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#icon {
+    width: 100%;
+    fill: #d7ecfb;
+    margin-bottom: 30px;
+}
+
+#file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    z-index: -1;
+}
+
+#select {
+    position: absolute;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+#status {
+    margin: 20px auto;
+    border: 1px solid #d7ecfb;
+    width: 70%;
+    height: 24px;
+    visibility: hidden;
+}
+
+#bar {
+    background: #2674ab;
+    width: 0%;
+    height: 100%;
+}
+
+#transfer {
+    width: 100%;
+    line-height: 24px;
+    margin-top: -24px;
+}
+
+.active {
+    background-color: rgb(52, 129, 243);
+}

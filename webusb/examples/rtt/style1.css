@@ -1,0 +1,87 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #d7ecfb;
+    background-color: #072b44;
+    text-align: center;
+}
+
+
+ul {
+    font-family: font-family;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #11354E;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #d7ecfb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(52, 129, 243);
+}
+
+
+h1 {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+a:link {
+    color: #d7ecfb;
+}
+
+a:visited {
+    color: #d7ecfb;
+}
+
+a:hover {
+    color: #d7ecfb;
+}
+
+a:active {
+    color: #d7ecfb;
+}
+
+button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.1em 0.1em 0;
+    border-radius: 2em;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    background-color: #f4511e;
+    float: left;
+}
+
+.active {
+    background-color: rgb(52, 129, 243);
+}

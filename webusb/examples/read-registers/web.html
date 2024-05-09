@@ -20,47 +20,31 @@
 
 <!DOCTYPE html>
 <html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+    <title>mm32link-service</title>
+
+    <link rel="icon" href="../../pic/m.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../pic/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
 <body>
+    <ul>
+        <li><a href="../firmware/web.html">Home</a></li>
+        <li><a href="https://www.mindmotion.com.cn/" target="_blank">MM32官网</a></li>
+        <li><a href="https://bbs.21ic.com/iclist-696-1.html" target="_blank">21ic论坛</a></li>
+        <li><a class="active" href="#VCP">在线串口</a></li>
+
+    </ul>
+    
     <button id="read">Read Registers</button>
 
     <script type="text/javascript" src="../../dist/dap.umd.js"></script>
-    <script>
-        const count = 16;
-
-        const readRegisters = async (device, count) => {
-            const transport = new DAPjs.WebUSB(device);
-            const processor = new DAPjs.CortexM(transport);
-
-            await processor.connect();
-            await processor.halt();
-
-            const registers = Array.from({ length: count }, (_, index) => index);
-            const values = await processor.readCoreRegisters(registers);
-
-            await processor.resume();
-            await processor.disconnect();
-
-            const result = values.map(register => ("00000000" + register.toString(16)).slice(-8));
-            return result;
-        };
-
-        document.getElementById("read").onclick = async () => {
-            const device = await navigator.usb.requestDevice({
-                filters: [{vendorId: 0x2F81}]
-            });
-            const values = await readRegisters(device, count);
-            values.forEach((value, index) => {
-                const registerEl = document.getElementById(`r${index}`);
-                registerEl.innerHTML = `Register ${index}: ${value}`;
-            });
-        };
-
-        for (let index = 0; index < count; index++) {
-            const registerEl = document.createElement("div");
-            registerEl.id = `r${index}`;
-            registerEl.innerHTML = `Register ${index}: None`;
-            document.body.appendChild(registerEl);
-        }
-    </script>
+    <script type="text/javascript" src="./main.js"></script>
 </body>
+
 </html>

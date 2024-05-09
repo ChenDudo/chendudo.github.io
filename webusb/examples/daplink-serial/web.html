@@ -20,61 +20,58 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+    <title>mm32link-service</title>
+
+    <link rel="icon" href="../../pic/m.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../pic/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style1.css">
+</head>
 
 <body>
-    <button id="connect">Connect</button>
-    <button id="disConnect">DisConnect</button>
-    <button id="send">Send</button>
+    <!-- tool bar -->
+    <ul>
+        <li><a href="../firmware/web.html">Home</a></li>
+        <li><a href="https://www.mindmotion.com.cn/" target="_blank">MM32官网</a></li>
+        <li><a href="https://bbs.21ic.com/iclist-696-1.html" target="_blank">21ic论坛</a></li>
+        <li><a class="active" href="#VCP">在线串口</a></li>
+        <li><a href="../rtt/web.html">RTT</a></li>
 
+    </ul>
 
+    <!-- option -->
+    <div id="sidebar">
+        <div>
+            <form>
+                <label for="fname">串口号</label>
+                <input type="text" id="portno" name="portno">
+                <label for="lname">波特率</label>
+                <input type="text" id="baudrate" name="baudrate">
+                <label for="lname">数据位</label>
+                <input type="text" id="datasize" name="datasize">
+                <label for="lname">校验位</label>
+                <input type="text" id="polority" name="polority">
+                <label for="lname">停止位</label>
+                <input type="text" id="stopbit" name="stopbit">
+            </form>
+        </div>
+        <div>
+            <button class="btn" id="connect">打开串口</button>
+        </div>
+    </div>
+    <div id="text_block">
+
+    </div>
     <div id="results" style="white-space: pre;" />
     <!-- <div id="text" style="white-space: pre;" /> -->
 
     <script type="text/javascript" src="../../dist/dap.umd.js"></script>
-    <script>
+    <script type="text/javascript" src="./main.js"></script>
 
-        var resultsEl = null;
-        var device = null;
-        var transport = null;
-        var target = null;
-
-        resultsEl = document.getElementById("results");
-
-        // Listen to serial output from the device
-        const listen = async (device, resultsEl) => {
-            transport = new DAPjs.WebUSB(device);
-            target = new DAPjs.DAPLink(transport);
-            target.on(DAPjs.DAPLink.EVENT_SERIAL_DATA, data => {
-                resultsEl.innerHTML += `${data}`;
-            });
-
-            await target.connect();
-            const baud = await target.getSerialBaudrate();
-            await target.disconnect();
-            resultsEl.innerHTML = `Listening at ${baud} baud...\n`;
-
-            target.startSerialRead();
-        };
-
-        document.getElementById("connect").onclick = async () => {
-            try {
-                device = await navigator.usb.requestDevice({
-                    filters: [{vendorId: 0x2F81}]
-                });
-            } catch (err) {
-                return
-            };
-            listen(device, resultsEl);
-        };
-
-        document.getElementById("disConnect").onclick = async()=>{
-            resultsEl.innerHTML += `Try to disconnect....\n`;
-            await target.disconnect();
-        }
-
-    </script>
 </body>
+
 </html>

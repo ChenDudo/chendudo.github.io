@@ -1,0 +1,138 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #d7ecfb;
+    background-color: #072b44;
+    text-align: center;
+}
+
+
+ul {
+    font-family: font-family;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #11354E;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #d7ecfb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(52, 129, 243);
+}
+
+
+h1 {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+a:link {
+    color: #d7ecfb;
+}
+
+a:visited {
+    color: #d7ecfb;
+}
+
+a:hover {
+    color: #d7ecfb;
+}
+
+a:active {
+    color: #d7ecfb;
+}
+
+.active {
+    background-color: rgb(52, 129, 243);
+}
+
+#text_block {
+    float: right;
+    width: 80%;
+    height: 400px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    float: left;
+    width: 20%;
+    height: 400px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 2px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn span:after {
+    content: '\00bb';
+    /* CSS Entities. 如果用的是 HTML Entities, 请改成 &#8594;*/
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 25px;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}

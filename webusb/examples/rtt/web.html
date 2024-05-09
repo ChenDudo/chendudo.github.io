@@ -24,159 +24,44 @@ SOFTWARE.
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <script type="text/javascript" src="../../dist/dap.umd.js"></script>
-        <script src="rtt.js"></script>
-        <link rel="stylesheet" href="xterm.css" />
-        <script src="xterm.js"></script>
-        <style>
-            button {
-                display: inline-block;
-                padding: 0.3em 1.2em;
-                margin: 0 0.1em 0.1em 0;
-                border-radius: 2em;
-                border:0.16em solid rgba(255,255,255,0);
-                box-sizing: border-box;
-                color:white;
-                text-align: center;
-                background-color:rgb(148, 13, 125)
-            }
-        </style>
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+    <title>mm32link-service</title>
+
+    <link rel="stylesheet" href="xterm.css" />
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="../../pic/m.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../pic/m.ico" type="image/x-icon">
+</head>
+
 <body>
+    <!-- tool bar -->
+    <ul>
+        <li><a href="../firmware/web.html">Home</a></li>
+        <li><a href="https://www.mindmotion.com.cn/" target="_blank">MM32官网</a></li>
+        <li><a href="https://bbs.21ic.com/iclist-696-1.html" target="_blank">21ic论坛</a></li>
+        <li><a href="../serialitldg/web.html">在线串口</a></li>
+        <li><a class="active" href="#RTT">RTT</a></li>
+
+    </ul>
+
+    
+    <div id="terminal"></div>
     <button id="control">start RTT</button>
 
-    <div id="terminal"></div>
+    <div>
+        <!-- <p>RTT terminal demo. Click button to connect / disconnect. Terminal input is sent on enter.</p> -->
+    </div>
+    
 
-    RTT terminal demo. Click button to connect / disconnect. Terminal input is sent on enter.
+    <script type="text/javascript" src="../../dist/dap.umd.js"></script>
+    <script src="rtt.js"></script>
+    <script src="xterm.js"></script>
 
-    <script>
-        // WebUSB and DAP
-        var device = null;
-        var transport = null;
-        var processor = null;
-        var rtt = null;
-
-        // terminal
-        var term = null;
-        var line_input = "";
-        var cmd = "";
-
-        // control
-        var connected = false;
-
-        // start/stop button
-        document.getElementById("control").onclick = async () => {
-            if (!connected) {
-                // locate debug probe
-                try {
-                    device = await navigator.usb.requestDevice({
-                        filters: [ {vendorId: 0x2F81} ]
-                    });
-                } catch (err) {
-                    return
-                };
-
-                transport = new DAPjs.WebUSB(device);
-                processor = new DAPjs.CortexM(transport);
-
-                // connect to target and reset it
-                await processor.connect();
-                await processor.softReset();
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                await processor.halt();
-                console.log('Connected.');
-
-                // locate RTT buffers
-                rtt = new RTT(processor);
-                numBufs = await rtt.init();
-                if (numBufs < 0)
-                    return;
-                console.log("RTT up buffers:", rtt.bufUp);
-                console.log("RTT down buffers:", rtt.bufDown);
-                await processor.resume();
-
-                document.getElementById("control").innerHTML = 'stop RTT';
-                connected = true;
-            } else {
-                connected = false;
-                rtt = null;
-                await processor.disconnect();
-                await transport.close();
-                await device.close();
-                term.reset();
-                document.getElementById("control").innerHTML = 'start RTT';
-                console.log('Disconnected.');
-            }
-        };
-
-        // process terminal keystroke
-        function processKey (e) {
-            if (!connected)
-                return;
-
-            const ev = e.domEvent;
-            const printable = !ev.altKey && !ev.ctrlKey && !ev.metaKey;
-
-            if (ev.keyCode === 13) { // process newline
-                if (line_input.length) {
-                    term.write('\r\n');
-                    cmd = line_input;
-                    console.log('sending: \"' + line_input + '\"');
-                    line_input = "";
-                }
-            } else if (ev.keyCode === 8) { // process backspace
-                if (term._core.buffer.x > 0) {
-                    term.write('\b \b');
-                    line_input = line_input.slice(0,-1);
-                }
-            } else if (printable) { // printable chars
-                term.write(e.key);
-                line_input += e.key;
-            }
-        }
-
-        // main loop
-        async function mainLoop () {
-            // set up terminal
-            term = new Terminal();
-            term.setOption("theme", {
-                background: "#202B33",
-                foreground: "#F5F8FA"
-            });
-            term.onKey(processKey);
-            term.open(document.getElementById('terminal'));
-            term.reset();
-            
-
-            while (true) {
-                if (!connected) {
-                    await new Promise(resolve => setTimeout(resolve, 100));
-                    continue;
-                }
-
-                // read from target
-                msg = await rtt.read(0);
-                if (msg.length > 0) {
-                    term.write( new TextDecoder().decode(msg) );
-                }
-                
-                // send to target
-                if (cmd.length) {
-                    cmdBytes = new TextEncoder().encode(cmd + "\r\n");
-                    ret = await rtt.write(0, cmdBytes);
-                    if (ret < 0)
-                        console.log("cannot write", cmdBytes, "chars");
-                    cmd = "";
-                }
-
-                await new Promise(resolve => setTimeout(resolve, 1));
-            }
-        }
-
-        mainLoop();
-
-    </script>
+    <script type="text/javascript" src="./main.js"></script>
 </body>
+
 </html>
