@@ -119,12 +119,12 @@
         name: 'Wi-Fi AT 命令集',
         list: [
             {
-                "name": "初始化/清理 Wi-Fi 驱动程序",
+                "name": "初始化/清理Wi-Fi驱动程序",
                 "content": "AT+CWINIT",
                 "hex": false
             },
             {
-                "name": "查询/设置 Wi-Fi 模式 (Station/SoftAP/Station+SoftAP)",
+                "name": "查询/设置Wi-Fi模式(Sta/SoftAP/all)",
                 "content": "AT+CWMODE",
                 "hex": false
             },
@@ -149,27 +149,27 @@
                 "hex": false
             },
             {
-                "name": "扫描当前可用的 AP",
+                "name": "扫描当前可用的AP",
                 "content": "AT+CWLAP",
                 "hex": false
             },
             {
-                "name": "断开与 AP 的连接",
+                "name": "断开与AP的连接",
                 "content": "AT+CWQAP",
                 "hex": false
             },
             {
-                "name": "配置 ESP32 SoftAP 参数",
+                "name": "配置ESP32 SoftAP参数",
                 "content": "AT+CWSAP",
                 "hex": false
             },
             {
-                "name": "查询连接到 ESP32 SoftAP 的 station 信息",
+                "name": "查询连接到ESP32SoftAP的station信息",
                 "content": "AT+CWLIF",
                 "hex": false
             },
             {
-                "name": "断开 station 与 ESP32 SoftAP 的连接",
+                "name": "断开station与ESP32 SoftAP的连接",
                 "content": "AT+CWQIF",
                 "hex": false
             },
@@ -179,7 +179,7 @@
                 "hex": false
             },
             {
-                "name": "查询/设置 ESP32 SoftAP DHCP 分配的 IPv4 地址范围",
+                "name": "查询/设置ESP32SoftAP DHCP分配的IPv4地址范围",
                 "content": "AT+CWDHCPS",
                 "hex": false
             },
@@ -189,78 +189,78 @@
                 "hex": false
             },
             {
-                "name": "查询/设置 SoftAP 模式下 802.11 b/g/n 协议标准",
+                "name": "查询/设置SoftAP模式下802.11 b/g/n协议标准",
                 "content": "AT+CWAPPROTO",
                 "hex": false
             },
             {
-                "name": "设置 Station 模式下 802.11 b/g/n 协议标准",
+                "name": "设置Station模式下802.11 b/g/n协议标准",
                 "content": "AT+CWSTAPROTO",
                 "hex": false
             },
             {
-                "name": "查询/设置 ESP32 Station 的 MAC 地址",
+                "name": "查询/设置ESP32 Station的MAC地址",
                 "content": "AT+CIPSTAMAC",
                 "hex": false
             },
             {
-                "name": "查询/设置 ESP32 SoftAP 的 MAC 地址",
+                "name": "查询/设置ESP32 SoftAP的MAC地址",
                 "content": "AT+CIPAPMAC",
                 "hex": false
             },
             {
-                "name": "查询/设置 ESP32 Station 的 IP 地址",
+                "name": "查询/设置ESP32 Station的IP地址",
                 "content": "AT+CIPSTA",
                 "hex": false
             },
             {
-                "name": "查询/设置 ESP32 SoftAP 的 IP 地址",
+                "name": "查询/设置ESP32 SoftAP的IP地址",
                 "content": "AT+CIPAP",
                 "hex": false
             },
             {
-                "name": "开启 SmartConfig",
+                "name": "开启SmartConfig",
                 "content": "AT+CWSTARTSMART",
                 "hex": false
             },
             {
-                "name": "停止 SmartConfig",
+                "name": "停止SmartConfig",
                 "content": "AT+CWSTOPSMART",
                 "hex": false
             },
             {
-                "name": "设置 WPS 功能",
+                "name": "设置WPS功能",
                 "content": "AT+WPS",
                 "hex": false
             },
             {
-                "name": "设置 mDNS 功能",
+                "name": "设置mDNS功能",
                 "content": "AT+MDNS",
                 "hex": false
             },
             {
-                "name": "连接 WPA2 企业版 AP",
+                "name": "连接WPA2企业版AP",
                 "content": "AT+CWJEAP",
                 "hex": false
             },
             {
-                "name": "查询/设置 ESP32 Station 的主机名称",
+                "name": "查询/设置ESP32 Station的主机名称",
                 "content": "AT+CWHOSTNAME",
                 "hex": false
             },
             {
-                "name": "查询/设置 Wi-Fi 国家代码",
+                "name": "查询/设置Wi-Fi国家代码",
                 "content": "AT+CWCOUNTRY",
                 "hex": false
             }
             ,
             {
-                "name": "查询/设置 Wi-Fi 功率",
+                "name": "查询/设置Wi-Fi功率",
                 "content": "AT+CWPOWER",
                 "hex": false
             },
             {
-                "name": "查询/设置 Wi-Fi 速率",
+                "name": "查询/设置Wi-Fi速率",
                 "content": "AT+CWSRATE",
                 "hex": false
             },
