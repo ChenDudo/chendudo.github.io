@@ -25,97 +25,248 @@
 	let currQuickSend = []
 	//快捷发送列表
 	let quickSendList = [
-		{
-			name: 'AT指令',
-			list: [
-				{
-					name: '测试 AT 启动',
-					content: 'AT',
-					hex: false,
-				},
-				{
-					name: '重启模块',
-					content: 'AT+RST',
-					hex: false,
-				},
-				{
-					name: '查看版本信息',
-					content: 'AT+GMR',
-					hex: false,
-				},
-				{
-					name: '查询当前固件支持的所有命令及命令类型',
-					content: 'AT+CMD?',
-					hex: false,
-				},
-				{
-					name: '进⼊ Deep-sleep 模式 1分钟',
-					content: 'AT+GSLP=60000',
-					hex: false,
-				},
-				{
-					name: '开启AT回显功能',
-					content: 'ATE1',
-					hex: false,
-				},
-				{
-					name: '关闭AT回显功能',
-					content: 'ATE0',
-					hex: false,
-				},
-				{
-					name: '恢复出厂设置',
-					content: 'AT+RESTORE',
-					hex: false,
-				},
-				{
-					name: '查询 UART 当前临时配置',
-					content: 'AT+UART_CUR?',
-					hex: false,
-				},
-				{
-					name: '设置 UART 115200 保存flash',
-					content: 'AT+UART_DEF=115200,8,1,0,3',
-					hex: false,
-				},
-				{
-					name: '查询 sleep 模式',
-					content: 'AT+SLEEP?',
-					hex: false,
-				},
-				{
-					name: '查询当前剩余堆空间和最小堆空间',
-					content: 'AT+SYSRAM?',
-					hex: false,
-				},
-				{
-					name: '查询系统提示信息',
-					content: 'AT+SYSMSG?',
-					hex: false,
-				},
-				{
-					name: '查询 flash 用户分区',
-					content: 'AT+SYSFLASH?',
-					hex: false,
-				},
-				{
-					name: '查询本地时间戳',
-					content: 'AT+SYSTIMESTAMP?',
-					hex: false,
-				},
-				{
-					name: '查询 AT 错误代码提示',
-					content: 'AT+SYSLOG?',
-					hex: false,
-				},
-				{
-					name: '设置/查询系统参数存储模式',
-					content: 'AT+SYSPARA?',
-					hex: false,
-				},
-			],
-		},
-	]
+    {
+        name: '基础 AT 命令集',
+        list: [
+            {
+                name: '测试 AT 启动',
+                content: 'AT',
+                hex: false,
+            },
+            {
+                name: '重启模块',
+                content: 'AT+RST',
+                hex: false,
+            },
+            {
+                name: '查看版本信息',
+                content: 'AT+GMR',
+                hex: false,
+            },
+            {
+                name: '查询当前固件支持的所有命令及命令类型',
+                content: 'AT+CMD?',
+                hex: false,
+            },
+            {
+                name: '进⼊ Deep-sleep 模式 1分钟',
+                content: 'AT+GSLP=60000',
+                hex: false,
+            },
+            {
+                name: '开启AT回显功能',
+                content: 'ATE1',
+                hex: false,
+            },
+            {
+                name: '关闭AT回显功能',
+                content: 'ATE0',
+                hex: false,
+            },
+            {
+                name: '恢复出厂设置',
+                content: 'AT+RESTORE',
+                hex: false,
+            },
+            {
+                name: '查询 UART 当前临时配置',
+                content: 'AT+UART_CUR?',
+                hex: false,
+            },
+            {
+                name: '设置 UART 115200 保存flash',
+                content: 'AT+UART_DEF=115200,8,1,0,3',
+                hex: false,
+            },
+            {
+                name: '查询 sleep 模式',
+                content: 'AT+SLEEP?',
+                hex: false,
+            },
+            {
+                name: '查询当前剩余堆空间和最小堆空间',
+                content: 'AT+SYSRAM?',
+                hex: false,
+            },
+            {
+                name: '查询系统提示信息',
+                content: 'AT+SYSMSG?',
+                hex: false,
+            },
+            {
+                name: '查询 flash 用户分区',
+                content: 'AT+SYSFLASH?',
+                hex: false,
+            },
+            {
+                name: '查询本地时间戳',
+                content: 'AT+SYSTIMESTAMP?',
+                hex: false,
+            },
+            {
+                name: '查询 AT 错误代码提示',
+                content: 'AT+SYSLOG?',
+                hex: false,
+            },
+            {
+                name: '设置/查询系统参数存储模式',
+                content: 'AT+SYSPARA?',
+                hex: false,
+            },
+        ],
+    },
+    {
+        name: 'Wi-Fi AT 命令集',
+        list: [
+            {
+                "name": "初始化/清理 Wi-Fi 驱动程序",
+                "content": "AT+CWINIT",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 Wi-Fi 模式 (Station/SoftAP/Station+SoftAP)",
+                "content": "AT+CWMODE",
+                "hex": false
+            },
+            {
+                "name": "查询 Wi-Fi 状态和 Wi-Fi 信息",
+                "content": "AT+CWSTATE",
+                "hex": false
+            },
+            {
+                "name": "连接 AP",
+                "content": "AT+CWJAP",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 Wi-Fi 重连配置",
+                "content": "AT+CWRECONNCFG",
+                "hex": false
+            },
+            {
+                "name": "设置 AT+CWLAP 命令扫描结果的属性",
+                "content": "AT+CWLAPOPT",
+                "hex": false
+            },
+            {
+                "name": "扫描当前可用的 AP",
+                "content": "AT+CWLAP",
+                "hex": false
+            },
+            {
+                "name": "断开与 AP 的连接",
+                "content": "AT+CWQAP",
+                "hex": false
+            },
+            {
+                "name": "配置 ESP32 SoftAP 参数",
+                "content": "AT+CWSAP",
+                "hex": false
+            },
+            {
+                "name": "查询连接到 ESP32 SoftAP 的 station 信息",
+                "content": "AT+CWLIF",
+                "hex": false
+            },
+            {
+                "name": "断开 station 与 ESP32 SoftAP 的连接",
+                "content": "AT+CWQIF",
+                "hex": false
+            },
+            {
+                "name": "启用/禁用 DHCP",
+                "content": "AT+CWDHCP",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 ESP32 SoftAP DHCP 分配的 IPv4 地址范围",
+                "content": "AT+CWDHCPS",
+                "hex": false
+            },
+            {
+                "name": "上电是否自动连接 AP",
+                "content": "AT+CWAUTOCONN",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 SoftAP 模式下 802.11 b/g/n 协议标准",
+                "content": "AT+CWAPPROTO",
+                "hex": false
+            },
+            {
+                "name": "设置 Station 模式下 802.11 b/g/n 协议标准",
+                "content": "AT+CWSTAPROTO",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 ESP32 Station 的 MAC 地址",
+                "content": "AT+CIPSTAMAC",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 ESP32 SoftAP 的 MAC 地址",
+                "content": "AT+CIPAPMAC",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 ESP32 Station 的 IP 地址",
+                "content": "AT+CIPSTA",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 ESP32 SoftAP 的 IP 地址",
+                "content": "AT+CIPAP",
+                "hex": false
+            },
+            {
+                "name": "开启 SmartConfig",
+                "content": "AT+CWSTARTSMART",
+                "hex": false
+            },
+            {
+                "name": "停止 SmartConfig",
+                "content": "AT+CWSTOPSMART",
+                "hex": false
+            },
+            {
+                "name": "设置 WPS 功能",
+                "content": "AT+WPS",
+                "hex": false
+            },
+            {
+                "name": "设置 mDNS 功能",
+                "content": "AT+MDNS",
+                "hex": false
+            },
+            {
+                "name": "连接 WPA2 企业版 AP",
+                "content": "AT+CWJEAP",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 ESP32 Station 的主机名称",
+                "content": "AT+CWHOSTNAME",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 Wi-Fi 国家代码",
+                "content": "AT+CWCOUNTRY",
+                "hex": false
+            }
+            ,
+            {
+                "name": "查询/设置 Wi-Fi 功率",
+                "content": "AT+CWPOWER",
+                "hex": false
+            },
+            {
+                "name": "查询/设置 Wi-Fi 速率",
+                "content": "AT+CWSRATE",
+                "hex": false
+            },
+		],
+	},
+]
 	//工具配置
 	let toolOptions = {
 		//自动滚动
