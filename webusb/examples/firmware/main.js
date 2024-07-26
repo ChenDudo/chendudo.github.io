@@ -14,6 +14,10 @@
     let textDetail = null;
 
     // new add Board Function follow:
+    let eleRecoryF0050 = document.getElementById("idRecoryF0050")
+    eleRecoryF0050.addEventListener("click", function recory_F0050() {
+        getRemoteBlob("./src/F0050/Mini-F0050-OB_V1.hex");
+    });
     let eleRecoryF5280 = document.getElementById("idRecoryF5280")
     eleRecoryF5280.addEventListener("click", function recory_F5280() {
         getRemoteBlob("./src/F5280/firmware.hex");
