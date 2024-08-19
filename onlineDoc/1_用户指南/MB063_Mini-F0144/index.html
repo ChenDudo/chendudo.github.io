@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/MB088_MM32LINK-MINI/">
+        <link rel="prev" href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/mb_SourceSet/">
       
       
         <link rel="next" href="../MB088_MM32LINK-MINI/">
@@ -281,6 +281,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/mb_SourceSet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    资源集合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -402,10 +423,25 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源分配
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       开发目标
     </span>
@@ -414,7 +450,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       资源下载
     </span>
@@ -423,7 +459,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       修改记录
     </span>
@@ -603,10 +639,25 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源分配
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       开发目标
     </span>
@@ -615,7 +666,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       资源下载
     </span>
@@ -624,7 +675,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       修改记录
     </span>
@@ -673,100 +724,90 @@
 <li>全贴片工艺设计</li>
 </ul>
 <h2 id="_3">使用说明</h2>
-<p>Mini-F0144 开发板的按键、LED 指示灯、CAN 连接器以及部分串口连接功能及关系，如以下表格说明：</p>
-<p>表1 按键功能与 MCU 连接关系表</p>
+<p>本节讲述Mini-F0144 开发板的按键、LED 指示灯、CAN 连接器以及部分串口连接关系。</p>
+<h3 id="_4">资源分配</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">开发板</th>
-<th style="text-align: center;">K1</th>
-<th style="text-align: center;">K2</th>
-<th style="text-align: center;">K3</th>
-<th style="text-align: center;">K4</th>
+<th style="text-align: center;">模块</th>
+<th style="text-align: center;">丝印</th>
+<th style="text-align: center;">IO分配</th>
+<th style="text-align: center;">其他参数</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">Mini-F0144</td>
+<td style="text-align: center;">按键</td>
+<td style="text-align: center;">K1</td>
 <td style="text-align: center;">PB1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">按键</td>
+<td style="text-align: center;">K2</td>
 <td style="text-align: center;">PB2</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">按键</td>
+<td style="text-align: center;">K3</td>
 <td style="text-align: center;">PB10</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">按键</td>
+<td style="text-align: center;">K4</td>
 <td style="text-align: center;">PB11</td>
+<td style="text-align: center;"></td>
 </tr>
-</tbody>
-</table>
-<p>表 2 LED 指示灯与 MCU 连接关系表</p>
-<table>
-<thead>
 <tr>
-<th style="text-align: center;">开发板</th>
-<th style="text-align: center;">LD1</th>
-<th style="text-align: center;">LD2</th>
-<th style="text-align: center;">LD3</th>
-<th style="text-align: center;">LD4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Mini-F0144</td>
+<td style="text-align: center;">LED灯</td>
+<td style="text-align: center;">LD1</td>
 <td style="text-align: center;">PA15</td>
+<td style="text-align: center;">红色</td>
+</tr>
+<tr>
+<td style="text-align: center;">LED灯</td>
+<td style="text-align: center;">LD2</td>
 <td style="text-align: center;">PB3</td>
+<td style="text-align: center;">翠绿</td>
+</tr>
+<tr>
+<td style="text-align: center;">LED灯</td>
+<td style="text-align: center;">LD3</td>
 <td style="text-align: center;">PB4</td>
+<td style="text-align: center;">蓝色</td>
+</tr>
+<tr>
+<td style="text-align: center;">LED灯</td>
+<td style="text-align: center;">LD4</td>
 <td style="text-align: center;">PB5</td>
-</tr>
-</tbody>
-</table>
-<p>表 3 CN1 目标 MCU USB 插座</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">引脚功能</th>
-<th style="text-align: center;">Mini-F0144</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">VBUS</td>
-<td style="text-align: center;">VCC</td>
+<td style="text-align: center;">黄色</td>
 </tr>
 <tr>
-<td style="text-align: center;">USB-DM</td>
-<td style="text-align: center;">--</td>
-</tr>
-<tr>
-<td style="text-align: center;">USB-DP</td>
-<td style="text-align: center;">--</td>
-</tr>
-<tr>
-<td style="text-align: center;">ID</td>
-<td style="text-align: center;">GND</td>
-</tr>
-<tr>
-<td style="text-align: center;">GND</td>
-<td style="text-align: center;">GND</td>
-</tr>
-</tbody>
-</table>
-<p>表 4 CN4 CAN 连接器插座</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">引脚功能</th>
-<th style="text-align: center;">Mini-F0144</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">CAN_RX</td>
+<td style="text-align: center;">CAN</td>
+<td style="text-align: center;">RX</td>
 <td style="text-align: center;">PB8</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">CAN_TX</td>
+<td style="text-align: center;">CAN</td>
+<td style="text-align: center;">TX</td>
 <td style="text-align: center;">PB9</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-<h2 id="_4">开发目标</h2>
+<p>CN1 目标 MCU USB 插座
+| 引脚功能 | Mini-F0144 |
+|:-----:|:--:|
+|VBUS|VCC|
+|USB-DM|--|
+|USB-DP|--|
+|ID|GND|
+|GND|GND|</p>
+<p>表 4 CN4 CAN 连接器插座</p>
+<h2 id="_5">开发目标</h2>
 <p>Mini-F0144 开发板基于开发对象部分包含：模拟输入、PWM、UART、SPI-Flash、I2C-EEPROM 等部分。</p>
 <p>表 5 目标 MCU 模拟功能连接关系表</p>
 <table>
@@ -883,12 +924,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_5">资源下载</h2>
+<h2 id="_6">资源下载</h2>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>资源</th>
+<th>链接</th>
 <th></th>
 </tr>
 </thead>
@@ -905,17 +946,17 @@
 </tr>
 <tr>
 <td>开发板原理图</td>
-<td><a href="https://www.mindmotion.com.cn/download/support/Mini-F0140_SCH.pdf">【Ver.A】</a></td>
+<td><a href="https://www.mindmotion.com.cn/download/support/Mini-F0140_SCH.pdf">【Rev.A】</a></td>
 <td></td>
 </tr>
 <tr>
 <td>交互式 BOM</td>
-<td><a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/bomhtml/MB063_MINI-F0144.html">【点击浏览】</a></td>
+<td><a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/bomhtml/MB063_MINI-F0144.html">【Rev.A】</a></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="_6">修改记录</h2>
+<h2 id="_7">修改记录</h2>
 <ul>
 <li>V1.1 @ 2024/07/30：在线版更新</li>
 <li>V1.0 @ 2022/05/24：首次发布</li>
