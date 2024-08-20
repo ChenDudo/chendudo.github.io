@@ -1,0 +1,1777 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../MB063_MINI-F0144/">
+      
+      
+        <link rel="next" href="../../2_%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B/MB063_MINI-F0144_TG/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>MB088 (MM32LINK-Mini) - 开发板在线文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="开发板在线文档" class="md-header__button md-logo" aria-label="开发板在线文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20"><polygon points="0,5 5,0 10,0 10,5 5,10 10,15 15,10 20,10 20,15 15,20 5,20 5,15 0,15" fill="orange" /><polygon points="15,0 25,0 25,5 30,5 30,15 25,20 20,20 20,15 25,10 20,5 15,10 10,10 10,5" fill="orange"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            开发板在线文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MB088 (MM32LINK-Mini)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="开发板在线文档" class="md-nav__button md-logo" aria-label="开发板在线文档" data-md-component="logo">
+      
+  
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20"><polygon points="0,5 5,0 10,0 10,5 5,10 10,15 15,10 20,10 20,15 15,20 5,20 5,15 0,15" fill="rgb(1,68,147)" /><polygon points="15,0 25,0 25,5 30,5 30,15 25,20 20,20 20,15 25,10 20,5 15,10 10,10 10,5" fill="rgb(241,153,20)" /></svg>
+
+    </a>
+    开发板在线文档
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0 资源合集
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            0 资源合集
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/MB063_MINI-F0144_FR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MB063 (Mini-F0144)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/MB088_MM32LINK-MINI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MB088 (MM32LINK-Mini)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/mb_SourceSet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    资源集合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 用户指南
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            1 用户指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MB063_MINI-F0144/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MB063 (Mini-F0144)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MB088 (MM32LINK-Mini)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MB088 (MM32LINK-Mini)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      A 资源下载
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      B 简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      C 硬件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C 硬件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-mini" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-MINI 原理图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-OB 原理图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-mini_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-MINI 引脚分配图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-ob_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-OB 调试输入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      指示灯状态
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      D 使用教程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D 使用教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keil" class="md-nav__link">
+    <span class="md-ellipsis">
+      KEIL 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iar" class="md-nav__link">
+    <span class="md-ellipsis">
+      IAR 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyocd" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyOCD 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      固件升级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    <span class="md-ellipsis">
+      U盘拖放下载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webusb" class="md-nav__link">
+    <span class="md-ellipsis">
+      网页 WebUSB 服务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网页 WebUSB 服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取开发板原理图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取在线 BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      芯片数据手册
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      芯片用户手册
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载出厂固件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash拖放编程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何恢复出厂(解锁)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e" class="md-nav__link">
+    <span class="md-ellipsis">
+      E 常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E 常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      插电脑上后没有驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      设备管理器有设备，但是 IDE 不识别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keil_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      烧录器连上了，但是KEIL设备列表里不显示被调试的板子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      无法识别虚拟U盘
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      F 参考资料
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 测试流程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            2 测试流程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B/MB063_MINI-F0144_TG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MB063 (Mini-F0144)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B/MB088_MM32LINK-MINI_TG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MB088 (MM32LINK-MINI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      A 资源下载
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      B 简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      C 硬件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C 硬件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-mini" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-MINI 原理图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-OB 原理图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-mini_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-MINI 引脚分配图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-ob_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK-OB 调试输入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      指示灯状态
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    <span class="md-ellipsis">
+      D 使用教程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D 使用教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keil" class="md-nav__link">
+    <span class="md-ellipsis">
+      KEIL 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iar" class="md-nav__link">
+    <span class="md-ellipsis">
+      IAR 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyocd" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyOCD 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      固件升级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    <span class="md-ellipsis">
+      U盘拖放下载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webusb" class="md-nav__link">
+    <span class="md-ellipsis">
+      网页 WebUSB 服务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网页 WebUSB 服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取开发板原理图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取在线 BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      芯片数据手册
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      芯片用户手册
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载出厂固件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash拖放编程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何恢复出厂(解锁)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e" class="md-nav__link">
+    <span class="md-ellipsis">
+      E 常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E 常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      插电脑上后没有驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      设备管理器有设备，但是 IDE 不识别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keil_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      烧录器连上了，但是KEIL设备列表里不显示被调试的板子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      无法识别虚拟U盘
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      F 参考资料
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>MB088 (MM32LINK-Mini)</h1>
+
+<p>MM32-LINK Series 基于 ARM 开源调试器方案 <em>ARMmbed/DAPLink</em> (<a href="https://github.com/ARMmbed/DAPLink">开源地址</a>) 。</p>
+<h2 id="a">A 资源下载</h2>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>链接</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原理图</td>
+<td><a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/sch/MB_088_MM32LINK_MINI_SCH_0708.pdf">【Rev.A】</a></td>
+<td></td>
+</tr>
+<tr>
+<td>升级工具</td>
+<td><a href="https://www.mindmotion.com.cn/download1.aspx?itemid=322&amp;typeid=4">【Rev1.01】</a></td>
+<td></td>
+</tr>
+<tr>
+<td>编程器</td>
+<td><a href="https://www.mindmotion.com.cn/download1.aspx?itemid=345&amp;typeid=4">【Rev1.08】</a></td>
+<td></td>
+</tr>
+<tr>
+<td>出厂固件</td>
+<td><a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/hex/MB088_LINK_MINI_230630.hex">【Rev.230630】</a></td>
+<td></td>
+</tr>
+<tr>
+<td>交互式 BOM</td>
+<td><a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/bomhtml/MB088_MM32LINK-MINI.html">【Rev.A】</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="b">B 简介</h2>
+<blockquote>
+<p>【DAPLINK 简介】</p>
+<p><strong>A</strong>rm Mbed DAPLink is an open-source software project that enables programming and debugging application software on running on Arm Cortex CPUs. Commonly referred to as interface firmware, DAPLink runs on a secondary MCU that is attached to the SWD or JTAG port of the application MCU. This configuration is found on nearly all development boards. It creates a bridge between your development computer and the CPU debug access port.</p>
+<p><strong>T</strong>he project is constantly under heavy development by Arm, its partners, numerous hardware vendors and the open-source community around the world. DAPLink has superseded the mbed CMSIS-DAP interface firmware project. You are free to use and contribute. </p>
+<p>【译】</p>
+<p>Arm Mbed DAPLink 是一个开源软件项目，可以在 Arm Cortex CPU 上运行编程和调试应用软件。DAPLink 的接口固件运行在调试器 MCU 上，该调试器 MCU 通过 SWD 或 JTAG 端口连接到调试目标 MCU。这种配置在几乎所有的板载调试器开发板上都可以找到，它能在您的开发计算机上与 CPU 调试访问端口之间建立桥接通道。</p>
+<p>本项目不断受到 Arm及其合作伙伴、众多硬件供应商，还有全球开源社区的大力开发，DAPLink 已取代 mbed CMSIS-DAP 接口固件项目，用户可以自由使用和贡献。</p>
+</blockquote>
+<p>(1) DAPLINK 功能</p>
+<ul>
+<li>全系列 Arm-Cortex 内核芯片的调试和烧录，ARM 官方维护，后续新内核依然会支持</li>
+<li>适配 DAPLINK V2 WINUSB 版本，速度对比 HID 版本提升 3 到 10 倍，极大地节约下载时间</li>
+<li>USB 转串口（CDC），以 COM 端口形式出现在 Windows 机器上，或以 /dev/tty 接口形式出现在 Linux 机器上，或以 /dev/usbmodem 形式出现在 Mac OS 机器上</li>
+<li>U 盘拖放烧录功能，可以直接将 hex 或者 bin 文件拖放到 U 盘实现烧录</li>
+<li>支持 WEBUSB 功能，除火狐浏览器外，可以网页烧录固件，支持插入弹窗</li>
+<li>支持 Keil MDK，IAR Workbench，PyOCD 等多种调试环境</li>
+</ul>
+<p>(2) MM32LINK 功能</p>
+<ul>
+<li><strong>含(1).DAPLINK全功能</strong></li>
+<li>MM32LINK-Utility 原厂工具支持，可对 MainFlash 和 OptionByte 区域操作</li>
+<li>支持 Keil IDE 对 MM32F0010、MM32G0001 等特殊芯片执行 Reset &amp; Run 指令</li>
+<li>支持 MM32F0010、MM32G0001等特殊芯片的变砖解锁，包含U盘拖放、WebUSB、Utility工具解锁等多种方式</li>
+</ul>
+<h2 id="c">C 硬件</h2>
+<p>MM32LINK Series 主要分类</p>
+<ul>
+<li>MM32LINK MINI</li>
+<li>MM32LINK OB</li>
+<li>~~MM32LINK MAX~~（已停止维护）</li>
+</ul>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230709192222255.png" alt="MM32LINK-family" /> -->
+<p><img alt="MM32LINK-family" src="../2023-07-08-mm32link.assets/image-20230709192222255.png" /></p>
+<h3 id="link-mini">LINK-MINI 原理图</h3>
+<p><img alt="MM32LINK-MINI-sch" src="../2023-07-08-mm32link.assets/image-20230709193115252.png" /></p>
+<h3 id="link-ob">LINK-OB 原理图</h3>
+<p>本文以 MB100-MINI-F5277 为例，MM32-Board 板载 OB 后续系列将基本延续该型号设计。</p>
+<p><img alt="MM32LINK-OB-sch" src="../2023-07-08-mm32link.assets/image-20230709193028089.png" /></p>
+<h3 id="link-mini_1">LINK-MINI 引脚分配图</h3>
+<p>MM32LINK-MINI 出厂附赠一根 10P-to-20P 转接线：</p>
+<table>
+<thead>
+<tr>
+<th><strong>引脚名称</strong></th>
+<th><strong>出厂线缆颜色</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TVCC</strong></td>
+<td>红</td>
+<td>目标板电源线。支持3.3V / 5V配置。默认输出 3.3V电平，若连接5V设备调试，须自行承担烧毁风险</td>
+</tr>
+<tr>
+<td><strong>Vref</strong></td>
+<td>橙</td>
+<td>目标板电源反馈线，支持内部电平转化器短接至 TVCC</td>
+</tr>
+<tr>
+<td><strong>GND</strong></td>
+<td>黑</td>
+<td>电源地线</td>
+</tr>
+<tr>
+<td><strong>SWCLK/TCK</strong></td>
+<td>蓝</td>
+<td>SWD CLK时钟线</td>
+</tr>
+<tr>
+<td><strong>SWDIO/TMS</strong></td>
+<td>黄</td>
+<td>SWD IO数据线</td>
+</tr>
+<tr>
+<td><strong>RESET</strong></td>
+<td>灰</td>
+<td>复位线。可接至目标芯片复位脚</td>
+</tr>
+<tr>
+<td><strong>TXD</strong></td>
+<td>绿</td>
+<td>虚拟串口 TX 线。接至目标板接收端</td>
+</tr>
+<tr>
+<td><strong>RXD</strong></td>
+<td>白</td>
+<td>虚拟串口 RX 线。接至目标板发送端</td>
+</tr>
+<tr>
+<td><strong>SWO/TDO</strong></td>
+<td>紫</td>
+<td>串行Trace输出线</td>
+</tr>
+<tr>
+<td><strong>TDI</strong></td>
+<td>●</td>
+<td>(注：MM32LINK-MINI 暂不支持)</td>
+</tr>
+</tbody>
+</table>
+<p>具体引脚的连接关系如下图所示，其中，<strong>Pin1</strong> 连接至 MM32LINK-MINI 调试器输出口，<strong>Pin2</strong> 连接至待调试目标板 JTAG-20P 连接口。</p>
+<!-- <img src="./2023-07-08-mm32link.assets/MINILINK接线图0714.drawio.svg" alt="MM32LINK-MINI接线图0714" style="zoom: 10%;" /> -->
+<p><img alt="MM32LINK-MINI接线图0714" src="../2023-07-08-mm32link.assets/MINILINK%E6%8E%A5%E7%BA%BF%E5%9B%BE0714.drawio.svg" /></p>
+<h3 id="link-ob_1">LINK-OB 调试输入</h3>
+<p>MM32LINK-OB 板载开发板提供了外部调试器接入口，可供外部调试器对板载目标芯片进行调试。</p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230709214147796.png" alt="MM32LINK-OB-DebugIN" style="zoom:50%;" /> -->
+<p><img alt="MM32LINK-OB-DebugIN" src="../2023-07-08-mm32link.assets/image-20230709214147796.png" /></p>
+<h3 id="_1">指示灯状态</h3>
+<p>两颗（或 1x 双色） LED 功能分别为：</p>
+<ul>
+<li>
+<p>DAP 运行指示，常亮</p>
+<p><!-- <img src="./2023-07-08-mm32link.assets/imageonline-co-gifimage (3)-1688913541200-10.gif" alt="Run State" style="zoom:50%;" /> -->
+<img alt="Run State" src="../2023-07-08-mm32link.assets/imageonline-co-gifimage%20%283%29-1688913541200-10.gif" /></p>
+</li>
+<li>
+<p>DEBUG 指示，烧录或调试时亮</p>
+<p><!-- <img src="./2023-07-08-mm32link.assets/imageonline-co-gifimage (5).gif" alt="Debug State" style="zoom:50%;" /> -->
+<img alt="Debug State" src="../2023-07-08-mm32link.assets/imageonline-co-gifimage%20%285%29.gif" /></p>
+</li>
+<li>
+<p>串口 CDC 指示，串口收发数据时快速闪烁</p>
+<p><!-- <img src="./2023-07-08-mm32link.assets/imageonline-co-gifimage (1).gif" alt="CDC State" style="zoom:50%;" /> -->
+<img alt="CDC State" src="../2023-07-08-mm32link.assets/imageonline-co-gifimage%20%281%29.gif" /></p>
+</li>
+<li>
+<p>MSC U 盘烧录功能指示，发生数据读写时快速闪烁</p>
+<p><!-- <img src="./2023-07-08-mm32link.assets/imageonline-co-gifimage (1).gif" alt="MSC State" style="zoom:50%;" /> -->
+<img alt="MSC State" src="../2023-07-08-mm32link.assets/imageonline-co-gifimage%20%281%29.gif" /></p>
+</li>
+</ul>
+<h2 id="d">D 使用教程</h2>
+<h3 id="keil">KEIL 配置</h3>
+<!-- <img src="./2023-07-08-mm32link.assets/GIF.gif" alt="Keil Tutrial" style="zoom:50%;" /> -->
+<p><img alt="Keil Tutrial" src="../2023-07-08-mm32link.assets/GIF.gif" /></p>
+<p>点击工程配置魔术棒，找到 Debug 选项卡，在下拉列表中选择 CMSIS-DAP Debugger，点击 Settings</p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230710100935021.png" alt="keil config-1" style="zoom:50%;" /> -->
+<p><img alt="keil config-1" src="../2023-07-08-mm32link.assets/image-20230710100935021.png" /></p>
+<p>查看设备是否连接正常，连接正常可以在 SW Device 列表里看到设备，可以调整时钟速度提高效率</p>
+<blockquote>
+<p>如果设备列表是空的，可能由于SW调试频率设置过高无法识别到目标芯片，可以调低频率后再使用</p>
+</blockquote>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230710101110574.png" alt="keil config-2" style="zoom:50%;" /> -->
+<p><img alt="keil config-2" src="../2023-07-08-mm32link.assets/image-20230710101110574.png" /></p>
+<p><strong>连接选项</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Options</th>
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Normal</td>
+<td style="text-align: left;">Stops the CPU at the currently executed instruction after connecting.</td>
+<td style="text-align: left;">在连接后将 CPU 停止在当前执行的指令上</td>
+</tr>
+<tr>
+<td style="text-align: left;">With Pre Reset</td>
+<td style="text-align: left;">Hardware reset (HW RESET) before connecting to the device.</td>
+<td style="text-align: left;">在连接到设备之前使能硬件复位(HW RESET)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Under Reset</td>
+<td style="text-align: left;">Holds the hardware reset(HWRESET) signal active while connecting to the device. Use this option when the user program disables the JTAG/SW interface by mistake</td>
+<td style="text-align: left;">在连接到设备时保持硬件复位 (HW RESET) 信号处于使能状态。当用户程序错误禁用 JTAG/SW 接口时，可以使用此选项（部分芯片不支持）</td>
+</tr>
+<tr>
+<td style="text-align: left;">Without Stop</td>
+<td style="text-align: left;">Connects to and disconnects from the target device without explicitly stopping the CPU. Use this option, for example, to inspect memory or peripheral SFRs.<br/>To use this Connect type properly, set all the following options:<br/>1.Disable Reset after Connect<br/>2.Disable Options for Target Debug- Load Application at Startup.</td>
+<td style="text-align: left;">连接到目标设备并断开与目标设备的连接，而不显式停止 CPU。例如使用此选项可检查内存或外围设备SFR。<br/>要正确使用此连接类型，请设置以下所有选项:<br/>1.连接后禁用复位<br/>2.禁用目标-调试-启动时加载应用程序的选项</td>
+</tr>
+</tbody>
+</table>
+<p><strong>复位选项</strong></p>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>function</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VECTRESET</td>
+<td>Performs a software reset by setting the VECTRESET bit. Only the Cortex-M core is reset. The on-chip peripherals are not affected. For some Cortex-M devices, VECTRESET is the only way to reset the core. VECTRESET is not supported on Cortex-M0 and Cortex-M1 cores.</td>
+<td>软件复位，通过 VECTRESET置位。仅复位Cortex-M内核，片上外设不会复位。<br/>对于某些Cortex-M设备，VECTRESET是复位内核的唯一方法。(注：M0和M1内核不支持)</td>
+</tr>
+<tr>
+<td>SYSRESETREQ</td>
+<td>Performs a software reset by setting the SYSRESETREQ bit. The Cortex-M core and on-chip peripherals are reset.</td>
+<td>软件复位，通过 SYSRESETREQ置位。<br/>Cortex-M内核和片上外设都被复位。</td>
+</tr>
+<tr>
+<td>HW RESET</td>
+<td>Performs a hardware reset by asserting the hardware reset (HW RESET) signal.</td>
+<td>硬件复位，通过控制 nReset 信号线</td>
+</tr>
+<tr>
+<td>Autodetect</td>
+<td>Selects one of the above reset methods based on the target device. The SYSRESETREQ method is used if an unknown device is detected.</td>
+<td>根据目标设备选择上述复位方法。如果检测到未知设备，则使用SYSRESETREQ方法。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="iar">IAR 配置</h3>
+<!-- <img src="./2023-07-08-mm32link.assets/IARGIF-1688951466314-2.gif" alt="IAR Tutrial" style="zoom:50%;" /> -->
+<p><img alt="IAR Tutrial" src="../2023-07-08-mm32link.assets/IARGIF-1688951466314-2.gif" /></p>
+<p>顶部菜单栏 Project 或者右击 Workspace 区域 Project，找到 Options ...（快捷键 Alt+F7），找到 Debugger 选项卡，从 Driver 列表中选中 CMSIS DAP</p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230710095601540.png" alt="IAR config-1" style="zoom:50%;" /> -->
+<p><img alt="IAR config-1" src="../2023-07-08-mm32link.assets/image-20230710095601540.png" /></p>
+<p>点击左侧 CMSIS DAP，进入设置。根据需要选择合适的复位方式、通信速率、调试探针。</p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230710100414640.png" alt="IAR config-2" style="zoom:50%;" /> -->
+<p><img alt="IAR config-2" src="../2023-07-08-mm32link.assets/image-20230710100414640.png" /></p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230710101323746.png" alt="IAR config-3" style="zoom:50%;" /> -->
+<p><img alt="IAR config-3" src="../2023-07-08-mm32link.assets/image-20230710101323746.png" /></p>
+<p><strong>复位选项</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Function</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disable (no reset)</td>
+<td>No reset is performed.</td>
+<td>不执行复位操作。</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>Sets PC to the program entry address and SP to the initial stack pointer value.</td>
+<td>将PC设置为程序入口地址，SP设置为堆栈指针的初始值。</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>The probe toggles the nSRST/ nRESET line on the JTAG connector to reset the device.</td>
+<td>通过翻转 nSRST/ nRESET 信号线复位设备。</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>Resets the core via the VECTRESET bit; the peripheral units are not affected.</td>
+<td>通过置位 VECTRESET 复位内核，片上外设不复位。</td>
+</tr>
+<tr>
+<td>Systems</td>
+<td>Resets the core and peripheral units by setting the SYSRESETREQ bit in the AIRCR register.</td>
+<td>通过置位 AIRCR.SYSRESETREQ 复位内核和片上外设。</td>
+</tr>
+<tr>
+<td>Connect during reset</td>
+<td>Reset_default: 9</td>
+<td>$SYSTEM_DIR$../MM32.probeScript中定义<br/>（不建议使用）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pyocd">PyOCD 配置</h3>
+<p>本文以 MM32F3273 为例，介绍如何通过 PyOCD 对目标芯片进行编程，请准备以下内容：</p>
+<ul>
+<li>
+<p>操作系统：Windows（macOS/Linux/FreeBSD/Windows，以Windows 为例）</p>
+</li>
+<li>
+<p>Python 3.6 及以上：https://www.python.org/</p>
+</li>
+<li>
+<p>libusb：https://libusb.info/</p>
+</li>
+<li>
+<p>准备工作</p>
+</li>
+<li>
+<p>下载 Python 与 libusb 的安装包或压缩包</p>
+</li>
+<li>
+<p>安装 Python</p>
+</li>
+<li>
+<p>解压 libusb，并将 libusb.dll 的路径添加到环境变量，或将libusb.dll 复制到 Python 根目录</p>
+</li>
+<li>
+<p>安装 PyOCD</p>
+</li>
+</ul>
+<p>可以通过 pip 安装或升级 pyOCD 的最新稳定版本， 如下所示：</p>
+<pre><code class="language-shell">$ pip install -U pyocd
+</code></pre>
+<p>如果安装过程缓慢，请尝试通过国内镜像源安装：</p>
+<pre><code class="language-shell">$ pip install -U pyocd -i https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre>
+<p>安装成功后在命令行中输入 pyOCD 应得到以下结果：</p>
+<pre><code class="language-shell">$ pyocd
+usage: pyocd [-h] [-V] [--help-options]  ...
+
+PyOCD debug tools for Arm Cortex devices
+
+options:
+  -h, --help       show this help message and exit
+  -V, --version    show program's version number and exit
+  --help-options   Display available session options.
+
+subcommands:
+
+    commander (cmd)
+                   Interactive command console.
+    erase          Erase entire device flash or specified sectors.
+    load (flash)   Load one or more images into target device memory.
+    gdbserver (gdb)
+                   Run the gdb remote server(s).
+    json           Output information as JSON.
+    list           List information about probes, targets, or boards.
+    pack           Manage CMSIS-Packs for target support.
+    reset          Reset a target device.
+    server         Run debug probe server.
+    rtt            SEGGER RTT Viewer.
+</code></pre>
+<ol>
+<li>安装目标芯片支持</li>
+</ol>
+<p>通过内置支持和 CMSIS-Packs，pyOCD 支持市场上几乎所有可用 Cortex-M 的MCU。</p>
+<p>通过以下命令可以查看当前系统支持的目标类型表，包括目标名称、供应商和部件号。此外，它会打印每个目标是内置的还是来自 CMSIS-Pack。</p>
+<pre><code class="language-shell">$ pyocd list --targets
+</code></pre>
+<p>PyOCD 提供了一个名为“cortex_m”的通用目标类型。这种目标类型能连接/调试几乎所有正确实现 Core-Sight 架构的 Cortex-M 设备。</p>
+<p>由于没有提供存储器映射，不能对Flash进行编程，而且可能不适用于某些需要特殊处理的设备操作（如复位和暂停）。由于通用“cortex_m”目标的限制，如果目标类型为“cortex_m”，将输出如下警告。</p>
+<pre><code class="language-shell">0000183: WARNING: board: Generic cortex_m target type is selected; is this intentional? You will be able to debug but not program flash. To set the target type use the '--target' argument or 'target_override' option. Use 'pyocd list --targets' to see available targets.
+</code></pre>
+<p>如果您的目标不在设备列表中，可以通过 CMSIS-Packs 方式安装支持。可直接通过下面的命令从网络直接获取支持（以MM32F3273为例）：</p>
+<pre><code class="language-shell">$ pyocd pack install mm32f3273
+</code></pre>
+<p>如果无法直接访问网络，可以通过提前下载对应的芯片pack文件，链接如下：</p>
+<ul>
+<li>官方 CMSIS-Pack 列表：http://www.keil.com/dd2/pack/</li>
+<li>灵动 MM32 官网：https://www.mindmotion.com.cn/support/software/keil_pack/</li>
+</ul>
+<p>有两种方法可以使用手动下载的包：</p>
+<ul>
+<li>
+<p>简单、临时方式：将 <code>–-pack</code> 选项传递给工具，指定 <code>.pack</code> 文件的路径</p>
+<p>PyOCD 不会缓存有关以这种方式使用的包的任何信息，因此除了其他参数之外，每次调用都必须传递此参数。例如，要运行 GDB 服务器，您可以执行</p>
+<p><code>shell
+$ pyocd gdbserver --pack=MindMotion.MM32F3270_DFP.1.0.6.pack</code></p>
+<p>注意：可以将多个 <code>–-pack</code> 参数传递给工具，该方式在脚本执行中很有用。</p>
+</li>
+<li>
+<p>如需长久的解决方案，请使用 <code>pyocd.yaml</code> 配置文件</p>
+<p>在配置文件中，Pack 将会话选项设置为单个 <code>.pack</code> 文件路径或路径列表。当运行工具时它会自动选择要使用的 Pack 包文件。</p>
+<p><code>yaml
+pack:
+  - /Users/admin/CMSIS-Packs/MindMotion.MM32F3270_DFP.1.0.6.pack</code></p>
+</li>
+</ul>
+<blockquote>
+<p>有关pyocd.yaml更详细的介绍，请参考：https://pyocd.io/docs/configuration.html</p>
+</blockquote>
+<p>安装完 DFP 后，<code>pyocd list –targets</code>命令将输出显示新目标，这时可以将目标支持与其他 PyOCD 子命令一起使用。要获取所有已安装包的列表，请使用 <code>pack show</code>子命令。</p>
+<ol>
+<li>使用 PyOCD 烧写程序</li>
+</ol>
+<p>4.1 擦除目标芯片</p>
+<p>以下命令演示如何擦除基于 MM32F3273 为目标的全部闪存</p>
+<pre><code class="language-shell">$ pyocd erase -t MM32F3273G7P --chip
+</code></pre>
+<p>输出：</p>
+<pre><code class="language-shell">$ pyocd erase -t MM32F3273G7P --chip
+0001535 W Invalid coresight component, cidr=0x0 [rom_table]
+0001559 I Erasing chip... [eraser]
+0001801 I Done [eraser]
+$
+</code></pre>
+<p>还可以通过 <code>pyocd erase -–help</code> 命令查看更多擦除帮助。</p>
+<p>4.2 烧写目标芯片</p>
+<p>以下命令演示了如何为基于 MM32F3273 为目标的编程操作</p>
+<pre><code class="language-shell">$ pyocd flash -t MM32F3273G7P .\mm32f3270_blink.bin
+</code></pre>
+<p>输出：</p>
+<pre><code class="language-shell">$ pyocd flash -t MM32F3273G7P .\mm32f3270_blink.bin
+0001588 W Invalid coresight component, cidr=0x0 [rom_table]
+0001611 I Loading C:\Users\chendo\mm32f3270_blink.bin [load_cmd]
+[==================================================] 100%
+0004237 I Erased 30720 bytes (30 sectors), programmed 30720 bytes (30 pages), skipped 17408 bytes (17 pages) at 17.90 kB/s [loader]
+$
+</code></pre>
+<p>以下命令演示了如何为基于 MM32F3273 为目标的特定地址编程：</p>
+<pre><code class="language-shell">$ pyocd flash -t MM32F3273G7P --base-address 0x08001000 Sample.bin
+</code></pre>
+<p>还可以通过 <code>pyocd flash -–help</code> 命令查看更多编程帮助。</p>
+<h3 id="_2">固件升级</h3>
+<p>从 MM32官网 下载 Upgrade 工具：<a href="https://www.mindmotion.com.cn/download1.aspx?itemid=322&amp;typeid=4">下载地址</a>。按下图示意，升级固件即可。</p>
+<!-- <img src="./2023-07-08-mm32link.assets/tool2GIF-1688960753666-8.gif" alt="upgrade tool" style="zoom:50%;" /> -->
+<p><img alt="upgrade tool" src="../2023-07-08-mm32link.assets/tool2GIF-1688960753666-8.gif" /></p>
+<p>最新固件版本概览</p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Boot Version</th>
+<th>APP Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MM32LINK-MINI</td>
+<td>Rev.220725</td>
+<td>Rev.230608</td>
+</tr>
+<tr>
+<td>MM32LINK-OB For F5270</td>
+<td>Rev.230520</td>
+<td>Rev.230618</td>
+</tr>
+<tr>
+<td>MM32LINK-OB For G0001</td>
+<td>Rev.230520</td>
+<td>Rev.230630</td>
+</tr>
+<tr>
+<td>MM32LINK-OB For G5330</td>
+<td>Rev.230520</td>
+<td>Rev.230630</td>
+</tr>
+<tr>
+<td>MM32LINK-OB For WB0510</td>
+<td>Rev.230520</td>
+<td>Rev.230630</td>
+</tr>
+</tbody>
+</table>
+<p>MM32LINK-MINI（Rev.230608）更新日志</p>
+<ul>
+<li>Fix Rev.230520 bug: Cancel Linker send F0010/G0001 unlock sequence when Power Up(Debug will into another boot space)</li>
+<li>Set default flash algorithm, support MM32F0010/MM32G0001 offline download</li>
+<li>Power Control: support Power up, Power down &amp; Power Restart special handle</li>
+<li>IAR Workbench V8.2x Support</li>
+</ul>
+<p>MM32LINK-OB（Rev.230630）更新日志</p>
+<ul>
+<li>Power Control: support Power up, Power down &amp; Power Restart special handle</li>
+<li>JTAG / Offline Download Support</li>
+<li>IAR Workbench V8.2x Support</li>
+</ul>
+<h3 id="u">U盘拖放下载</h3>
+<p>MM32LINK Series U盘驱动标签名列表：</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Drive Name/Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MM32LINK-MINI</td>
+<td>MM32LINK I</td>
+</tr>
+<tr>
+<td>MM32LINK-OB For F5270</td>
+<td>MINI-F5277</td>
+</tr>
+<tr>
+<td>MM32LINK-OB For G5330</td>
+<td>MINI-G5333</td>
+</tr>
+<tr>
+<td>MM32LINK-OB For WB0510</td>
+<td>MINIWB0510</td>
+</tr>
+</tbody>
+</table>
+<p>用户通过 U 盘拖放对目标芯片进行编程之前，请确保当前 MM32-LINK 固件是否支持该型号算法（OB系列默认支持当前板载目标芯片 Flash 算法）。</p>
+<p>可以采用拷贝粘贴、右键发送或者直接拖放的形式进行。如update果目标芯片 Flash 下载成功，等待设备重新枚举后，根目录没有新增文件即视为正常。</p>
+<!-- <img src="./2023-07-08-mm32link.assets/download2.gif" alt="msc download" style="zoom:50%;" /> -->
+<p><img alt="msc download" src="../2023-07-08-mm32link.assets/download2.gif" /></p>
+<h3 id="webusb">网页 WebUSB 服务</h3>
+<p><a href="https://chendudo.github.io/webusb/examples/firmware/web.html">点此访问首页</a>，预览图如下：</p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-20230710145805643.png" alt="web sever" style="zoom:50%;" /> -->
+<p><img alt="web sever" src="../2023-07-08-mm32link.assets/image-20230710145805643.png" /></p>
+<h4 id="_3">获取开发板原理图</h4>
+<!-- <img src="./2023-07-08-mm32link.assets/schGIF.gif" alt="sch file" style="zoom:50%;" /> -->
+<p><img alt="sch file" src="../2023-07-08-mm32link.assets/schGIF.gif" /></p>
+<h4 id="bom">获取在线 BOM</h4>
+<!-- <img src="./2023-07-08-mm32link.assets/bomGIF.gif" alt="online BOM list" style="zoom:50%;" /> -->
+<p><img alt="online BOM list" src="../2023-07-08-mm32link.assets/bomGIF.gif" /></p>
+<h4 id="_4">芯片数据手册</h4>
+<!-- <img src="./2023-07-08-mm32link.assets/dsGIF.gif" alt="target DS File" style="zoom:50%;" /> -->
+<p><img alt="target DS File" src="../2023-07-08-mm32link.assets/dsGIF.gif" /></p>
+<h4 id="_5">芯片用户手册</h4>
+<!-- <img src="./2023-07-08-mm32link.assets/umGIF.gif" alt="target UM File" style="zoom:50%;" /> -->
+<p><img alt="target UM File" src="../2023-07-08-mm32link.assets/umGIF.gif" /></p>
+<h4 id="_6">下载出厂固件</h4>
+<!-- <img src="./2023-07-08-mm32link.assets/saveGIF.gif" alt="factory firmware" style="zoom:50%;" /> -->
+<p><img alt="factory firmware" src="../2023-07-08-mm32link.assets/saveGIF.gif" /></p>
+<h4 id="flash">Flash拖放编程</h4>
+<!-- <img src="./2023-07-08-mm32link.assets/d2GIF.gif" alt="flash program" style="zoom:50%;" /> -->
+<p><img alt="flash program" src="../2023-07-08-mm32link.assets/d2GIF.gif" /></p>
+<h4 id="_7">如何恢复出厂(解锁)</h4>
+<!-- <img src="./2023-07-08-mm32link.assets/resetGIF.gif" alt="Factory Reset" style="zoom:50%;" /> -->
+<p><img alt="Factory Reset" src="../2023-07-08-mm32link.assets/resetGIF.gif" /></p>
+<p>本文以 MM32G0001 为例，当 SWD 被禁用后，如何通过 Web Server 进行恢复：</p>
+<!-- <img src="./2023-07-08-mm32link.assets/recoGIF.gif" alt="recovery G0001" style="zoom:50%;" /> -->
+<p><img alt="recovery G0001" src="../2023-07-08-mm32link.assets/recoGIF.gif" /></p>
+<h3 id="_8">其他工具</h3>
+<p>MM32LINK-Utility 请从 MM32 官网进行下载：<a href="https://www.mindmotion.com.cn/download1.aspx?itemid=345&amp;typeid=4">下载地址</a></p>
+<blockquote>
+<p>本文暂不介绍</p>
+</blockquote>
+<h2 id="e">E 常见问题</h2>
+<h3 id="_9">插电脑上后没有驱动</h3>
+<p>若连上之后，串口设备名称为 mbed Serial Port，并且无法自动识别WINUSB驱动。则为驱动被污染，解决方法如下：</p>
+<ul>
+<li>
+<p>设备管理器-串口(COM和LPT)-mbed Serial Port(COMxx)-右击-卸载设备，勾选删除此设备的驱动程序软件，点击确定</p>
+</li>
+<li>
+<p>设备管理器-通用串行总线控制器-mbed开头的一个设备-右击-卸载设备，勾选删除此设备的驱动程序软件，点击确定</p>
+</li>
+<li>
+<p>点击设备管理器上方的扫描检测硬件改动按钮</p>
+</li>
+</ul>
+<h3 id="ide">设备管理器有设备，但是 IDE 不识别</h3>
+<p>或与上个问题里一样，用的是假驱动</p>
+<h3 id="keil_1">烧录器连上了，但是KEIL设备列表里不显示被调试的板子</h3>
+<ul>
+<li>
+<p>被调试的芯片无法支持较高频率，可以调低频率后再使用</p>
+</li>
+<li>
+<p>被调试板子关闭了SWD功能</p>
+</li>
+</ul>
+<h3 id="u_1">无法识别虚拟U盘</h3>
+<blockquote>
+<p>⚠特别警告：安装创新工坊(PWLINK)的驱动后，会导致所有基于ARM官方DAPLINK固件的设备功能异常，包括但不限于：虚拟U盘消失、无法烧录。</p>
+</blockquote>
+<p>连接 DAPLink 到电脑，打开设备管理器，找到如下设备，右击–卸载设备</p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-3.png" alt="PC remove device" style="zoom:50%;" /> -->
+<p><img alt="PC remove device" src="../2023-07-08-mm32link.assets/image-3.png" /></p>
+<p>勾选 删除此设备的驱动程序软件，点击确定即可卸载</p>
+<!-- <img src="./2023-07-08-mm32link.assets/image-4.png" alt="PC remove driver" style="zoom:50%;" /> -->
+<p><img alt="PC remove driver" src="../2023-07-08-mm32link.assets/image-4.png" /></p>
+<p>请勿再次安装该驱动，以免设备无法使用</p>
+<h2 id="f">F 参考资料</h2>
+<p>[1]. DAPLink Handbook. https://os.mbed.com/handbook/DAPLink</p>
+<p>[2]. DAPLink 使用手册. https://wiki.luatos.com/chips/air32f103/daplink.html</p>
+<p>[3]. PyOCD 用户指南. https://pyocd.io/</p>
+<p>[4]. Zadig <em>USB driver installation made easy</em> 常见问题. https://github.com/pbatard/libwdi/wiki/FAQ#Zadig</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
