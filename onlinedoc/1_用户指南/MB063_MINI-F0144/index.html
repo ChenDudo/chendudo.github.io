@@ -784,32 +784,14 @@
 <td style="text-align: center;">PB5</td>
 <td style="text-align: center;">黄色</td>
 </tr>
-<tr>
-<td style="text-align: center;">CAN</td>
-<td style="text-align: center;">RX</td>
-<td style="text-align: center;">PB8</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">CAN</td>
-<td style="text-align: center;">TX</td>
-<td style="text-align: center;">PB9</td>
-<td style="text-align: center;"></td>
-</tr>
 </tbody>
 </table>
-<p>CN1 目标 MCU USB 插座
-| 引脚功能 | Mini-F0144 |
-|:-----:|:--:|
-|VBUS|VCC|
-|USB-DM|--|
-|USB-DP|--|
-|ID|GND|
-|GND|GND|</p>
-<p>表 4 CN4 CAN 连接器插座</p>
+<p>CN1 USB 插座：仅供电，不提供USB通信功能</p>
 <h2 id="_5">开发目标</h2>
 <p>Mini-F0144 开发板基于开发对象部分包含：模拟输入、PWM、UART、SPI-Flash、I2C-EEPROM 等部分。</p>
-<p>表 5 目标 MCU 模拟功能连接关系表</p>
+<ul>
+<li>目标 MCU 模拟功能连接关系表</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -832,7 +814,9 @@
 </tr>
 </tbody>
 </table>
-<p>表 6 目标 MCU PWM 输出连接关系表</p>
+<ul>
+<li>目标 MCU PWM 输出连接关系表</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -847,7 +831,9 @@
 </tr>
 </tbody>
 </table>
-<p>表 7 目标 MCU UART 输出连接关系表</p>
+<ul>
+<li>目标 MCU UART 输出连接关系表</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -878,7 +864,9 @@
 </tr>
 </tbody>
 </table>
-<p>表 8 目标 MCU I2C 输出连接关系表</p>
+<ul>
+<li>目标 MCU I2C 输出连接关系表</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -897,7 +885,9 @@
 </tr>
 </tbody>
 </table>
-<p>表 9 目标 MCU SPI 输出连接关系表</p>
+<ul>
+<li>目标 MCU SPI 输出连接关系表</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -921,6 +911,27 @@
 <tr>
 <td style="text-align: center;">MOSI</td>
 <td style="text-align: center;">PB15</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>目标 MCU CAN 输出连接关系表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">引脚功能</th>
+<th style="text-align: center;">Mini-F0144</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">CAN_RX</td>
+<td style="text-align: center;">PB8</td>
+</tr>
+<tr>
+<td style="text-align: center;">CAN_TX</td>
+<td style="text-align: center;">PB9</td>
 </tr>
 </tbody>
 </table>
@@ -954,11 +965,16 @@
 <td><a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/bomhtml/MB063_MINI-F0144.html">【Rev.A】</a></td>
 <td></td>
 </tr>
+<tr>
+<td>出厂程序</td>
+<td><a href="../../0_%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86/hex/MB063_MINI-F0144.hex">【Latest】</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="_7">修改记录</h2>
 <ul>
-<li>V1.1 @ 2024/07/30：在线版更新</li>
+<li>V1.1 @ 2024/08/30：在线版更新</li>
 <li>V1.0 @ 2022/05/24：首次发布</li>
 </ul>
 <blockquote>
