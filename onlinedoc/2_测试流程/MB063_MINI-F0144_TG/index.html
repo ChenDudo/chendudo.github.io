@@ -947,7 +947,7 @@
 <li>2x5P （两端子）线束（黑）</li>
 </ol>
 <p>工装如下：</p>
-<p><center><img src="./MB063/image-0.png" width="50%"></center></p>
+<p><center><img src="../MB063/image-0.png" width="50%"></center></p>
 <h3 id="12">1.2 烧录流程</h3>
 <h4 id="121">1.2.1 目录结构</h4>
 <pre><code>灵动微_工厂测试
@@ -963,12 +963,12 @@
 <h4 id="122-mcuprog_v008exe">1.2.2 双击运行 <code>MCUProg_V0.0.8.exe</code></h4>
 <p>(如果 Windows 提示安全警示弹窗，请点击信任允许后继续)</p>
 <p>打开后主界面：</p>
-<p><center><img src="./MB063/image.png" width="80%"></center></p>
+<p><center><img src="../MB063/image.png" width="80%"></center></p>
 <p>使用提供的工装 <code>MM32LINK-MINI</code> 连接至待烧录的 MB063 开发板的 JTAG 牛角座，连接后示意图：</p>
-<p><center><img src="./MB063/image-1.png" width="30%"></center></p>
+<p><center><img src="../MB063/image-1.png" width="30%"></center></p>
 <p><strong><em>此时红色 LED 灯亮，待烧录板供电正常</em></strong></p>
 <h4 id="123">1.2.3 烧录软件步骤</h4>
-<p><center><img src="./MB063/image-2.png" width="80%"></center></p>
+<p><center><img src="../MB063/image-2.png" width="80%"></center></p>
 <p>完整步骤：</p>
 <ol>
 <li>选择pack，选中 MB063 测试文件夹下 .pack 后缀名文件：<code>MindMotion.MM32F0140_DFP.1.2.2.pack</code></li>
@@ -982,16 +982,16 @@
 <li>点击"<code>烧录</code>"</li>
 <li>烧录完成后点击"<code>断开</code>"，如下图所示：</li>
 </ol>
-<p><center><img src="./MB063/image-3.png" width="50%"></center></p>
+<p><center><img src="../MB063/image-3.png" width="50%"></center></p>
 <h2 id="2">2. 测试环节</h2>
 <h3 id="_1">准备工作</h3>
 <p>待测试 MB063 与烧录器 MM32LINK MINI 保持连接。</p>
 <p>在工具文件夹 <code>\灵动微_工厂测试\工具</code> 下，双击打开串口助手软件：<code>XCOM V2.0.exe</code>，如图所示：</p>
-<p><center><img src="./MB063/image-4.png" width="30%"></center></p>
+<p><center><img src="../MB063/image-4.png" width="30%"></center></p>
 <p>打开界面后，配置如下：</p>
-<p><center><img src="./MB063/image-5.png" width="80%"></center></p>
+<p><center><img src="../MB063/image-5.png" width="80%"></center></p>
 <ol>
-<li>COMx 选择：具体的<code>COM</code>端口号，请在<code>计算机-设备管理器-端口(COM和LPT)</code>，可通过插拔USB设备，查看当前设备的端口号。如下图所示：<br><center><img src="./MB063/image-6.png" width="80%"></center></li>
+<li>COMx 选择：具体的<code>COM</code>端口号，请在<code>计算机-设备管理器-端口(COM和LPT)</code>，可通过插拔USB设备，查看当前设备的端口号。如下图所示：<br><center><img src="../MB063/image-6.png" width="80%"></center></li>
 <li>波特率：<code>115200</code></li>
 <li>停止位：保持默认 <code>1</code></li>
 <li>数据位：保持默认 <code>8</code></li>
@@ -1005,7 +1005,7 @@
 <ol>
 <li>上电复位：只需重新插拔 2x5P 端子线束，不需要插拔USB线缆，芯片复位后运行出厂固件。</li>
 <li>蜂鸣器"滴-滴"两声，红、绿、蓝、橙灯连续闪烁两次（检查1x蜂鸣器、4xLED）</li>
-<li>在打开的串口软件界面，检查图示两项信息即可：<br><center><img src="./MB063/image-7.png" width="100%"></center><br>- SPI-FLASH Read ID信息：输出序列不出现<code>全FF</code>或<code>全00</code>即可；<br>- I2C-E2PROM 信息：输出 <code>0xaa</code> 序列即可</li>
+<li>在打开的串口软件界面，检查图示两项信息即可：<br><center><img src="../MB063/image-7.png" width="100%"></center><br>- SPI-FLASH Read ID信息：输出序列不出现<code>全FF</code>或<code>全00</code>即可；<br>- I2C-E2PROM 信息：输出 <code>0xaa</code> 序列即可</li>
 <li>检查 4 路按键</li>
 <li>KEY1：播放/暂停音频1</li>
 <li>KEY2：播放/暂停音频2</li>
