@@ -84,21 +84,21 @@ share_to: true #enable share-to buttons if true
 
 #### Author information
 author:
-  name: Chen Do     ## e.g. wuchong Author name
+  name:         Chen Do     ## e.g. wuchong Author name
   intro_line1:  "Welcome to visit!"    ## your introduction on the bottom of the page
   intro_line2:  "Record every bit of my work and study."  ## the 2nd line
-  weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
-  weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
-  tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
-  douban: 130030911    ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
-  zhihu:  chen-du-du-71 ## e.g. jark  for http://www.zhihu.com/people/jark
-  email:  chelseadudo@gmail.edu.cn    ## e.g. imjark@gmail.com
-  twitter:    ## e.g. jarkwu for https://twitter.com/jarkwu
-  github:  chendudo   ## e.g. wuchong for https://github.com/wuchong
-  facebook:   ## e.g. imjark for https://facebook.com/imjark
-  linkedin:  ## e.g. wuchong1014 for https://www.linkedin.com/in/wuchong1014
-  google_plus:    ## e.g. "111190881341800841449" for https://plus.google.com/u/0/111190881341800841449, the "" is needed!
-  stackoverflow:  ## e.g. 3222790 for http://stackoverflow.com/users/3222790/jark
+  weibo:        ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
+  weibo_verifier: ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
+  tsina:        ## e.g. 2176287895  Your weibo ID,It will be used in share button.
+  douban:       130030911    ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
+  zhihu:        ## e.g. jark  for http://www.zhihu.com/people/jark
+  email:        chelseadudo@gmail.com    ## e.g. imjark@gmail.com
+  twitter:      ## e.g. jarkwu for https://twitter.com/jarkwu
+  github:       chendudo   ## e.g. wuchong for https://github.com/wuchong
+  facebook:     ## e.g. imjark for https://facebook.com/imjark
+  linkedin:     ## e.g. wuchong1014 for https://www.linkedin.com/in/wuchong1014
+  google_plus:  ## e.g. "111190881341800841449" for https://plus.google.com/u/0/111190881341800841449, the "" is needed!
+  stackoverflow: ## e.g. 3222790 for http://stackoverflow.com/users/3222790/jark
 ## if you set them, the corresponding  share button will show on the footer
 
 #### Toc
@@ -111,8 +111,8 @@ toc:
 #### Links
 links:
   Github: https://github.com/chendudo
-  CSDN: https://blog.csdn.net/chendu103/
-  Blog: https://chendudo.github.io/
+  CSDN:   https://blog.csdn.net/chendu103/
+  Blog:   https://chendudo.github.io/
   webusb: https://chendudo.github.io/webusb/
 
 #### Comment
