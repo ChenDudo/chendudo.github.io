@@ -90,8 +90,8 @@ author:
   weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
   weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
   tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
-  douban:     ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
-  zhihu:      ## e.g. jark  for http://www.zhihu.com/people/jark
+  douban: https://www.douban.com/people/130030911    ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
+  zhihu:  https://www.zhihu.com/people/chen-du-du-71 ## e.g. jark  for http://www.zhihu.com/people/jark
   email:  chelseadudo@gmail.edu.cn    ## e.g. imjark@gmail.com
   twitter:    ## e.g. jarkwu for https://twitter.com/jarkwu
   github:  chendudo   ## e.g. wuchong for https://github.com/wuchong
