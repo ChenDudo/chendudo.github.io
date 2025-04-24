@@ -267,7 +267,7 @@
 		],
 	},
 	{
-        name: '华大 ISP 命令集',
+        name: '小华 ISP 命令集',
         list: [
 			{
 				"name": "Query",
@@ -281,7 +281,7 @@
 			},
 			{
 				"name": "Set BaseAddr",
-				"content": "650527000010000D09",
+				"content": "650527000000009c9c",
 				"hex": true
 			},
 			{
@@ -291,7 +291,7 @@
 			},
 			{
 				"name": "Sector Erase",
-				"content": "6503220000DEDB",
+				"content": "6505210000000004A7",
 				"hex": true
 			},
 			{
@@ -301,22 +301,22 @@
 			},
 			{
 				"name": "Write Data",
-				"content": "658128000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f11c5",
+				"content": "65852800000000000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f33d6",
 				"hex": true
 			},
 			{
 				"name": "Read Data",
-				"content": "6504290000028B1C",
+				"content": "65062900000000125E0C",
 				"hex": true
 			},
 			{
 				"name": "Check Sum",
-				"content": "6505240000000474C7",
+				"content": "65092400000000000400002CC5",
 				"hex": true
 			},
 			{
 				"name": "Verify Data",
-				"content": "65052300000004A8F7",
+				"content": "6509230000000000040000CE2C",
 				"hex": true
 			},
 			{
@@ -331,17 +331,17 @@
 			},
 			{
 				"name": "SetProtectLevel1",
-				"content": "65022C014634",
+				"content": "65022C01CF25",
 				"hex": true
 			},
 			{
 				"name": "SetProtectLevel2",
-				"content": "65022C024634",
+				"content": "65022C025417",
 				"hex": true
 			},
 			{
 				"name": "SetProtectLevel3",
-				"content": "65022C034634",
+				"content": "65022C03DD06",
 				"hex": true
 			}
 		],
