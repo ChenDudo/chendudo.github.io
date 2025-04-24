@@ -345,7 +345,7 @@
 				"hex": true
 			}
 		],
-	}
+	},
 ]
 	//工具配置
 	let toolOptions = {
