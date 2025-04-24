@@ -266,6 +266,86 @@
             },
 		],
 	},
+	{
+        name: '华大 ISP 命令集',
+        list: [
+			{
+				"name": "Query",
+				"content": "65011065F3",
+				"hex": true
+			},
+			{
+				"name": "PPS-1M",
+				"content": "65031100038F80",
+				"hex": true
+			},
+			{
+				"name": "Set BaseAddr",
+				"content": "650527000010000D09",
+				"hex": true
+			},
+			{
+				"name": "Chip Erase",
+				"content": "650120E6C2",
+				"hex": true
+			},
+			{
+				"name": "Sector Erase",
+				"content": "6503220000DEDB",
+				"hex": true
+			},
+			{
+				"name": "Blank Check",
+				"content": "650122F4E1",
+				"hex": true
+			},
+			{
+				"name": "Write Data",
+				"content": "658128000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f000102030405060708090a0b0c0d0e0f11c5",
+				"hex": true
+			},
+			{
+				"name": "Read Data",
+				"content": "6504290000028B1C",
+				"hex": true
+			},
+			{
+				"name": "Check Sum",
+				"content": "6505240000000474C7",
+				"hex": true
+			},
+			{
+				"name": "Verify Data",
+				"content": "65052300000004A8F7",
+				"hex": true
+			},
+			{
+				"name": "Jump",
+				"content": "650530040800202C8D",
+				"hex": true
+			},
+			{
+				"name": "SetProtectLevel0",
+				"content": "65022C004634",
+				"hex": true
+			},
+			{
+				"name": "SetProtectLevel1",
+				"content": "65022C014634",
+				"hex": true
+			},
+			{
+				"name": "SetProtectLevel2",
+				"content": "65022C024634",
+				"hex": true
+			},
+			{
+				"name": "SetProtectLevel3",
+				"content": "65022C034634",
+				"hex": true
+			}
+		],
+	}
 ]
 	//工具配置
 	let toolOptions = {
