@@ -316,7 +316,7 @@
 			},
 			{
 				"name": "Verify Data",
-				"content": "6509230000000000040000CE2C",
+				"content": "650923000000000002000017FA",
 				"hex": true
 			},
 			{
@@ -342,6 +342,21 @@
 			{
 				"name": "SetProtectLevel3",
 				"content": "65022C03DD06",
+				"hex": true
+			},
+			{
+				"name": "NVR BaseAddr",
+				"content": "650527000010000D09",
+				"hex": true
+			},
+			{
+				"name": "OTP Write",
+				"content": "65092800100000123456785B34",
+				"hex": true
+			},
+			{
+				"name": "Otp Read",
+				"content": "650629001000000448BA",
 				"hex": true
 			}
 		],
