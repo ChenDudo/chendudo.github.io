@@ -355,7 +355,7 @@
 				"hex": true
 			},
 			{
-				"name": "Otp Read",
+				"name": "OTP Read",
 				"content": "650629001000000448BA",
 				"hex": true
 			}
@@ -371,7 +371,7 @@
 		//串口事件
 		showComTime: false,
 		//日志类型
-		logType: 'ascii',
+		logType: 'hex',
 		//分包合并时间
 		timeOut: 50,
 		//末尾加回车换行
