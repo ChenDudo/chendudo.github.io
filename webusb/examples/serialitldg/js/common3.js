@@ -930,14 +930,14 @@
 				dataHex.push(('0' + d.toString(16).toLocaleUpperCase()).slice(-2))
 			}
 			if (toolOptions.logType.includes('&')) {
-				newmsg += '<br/>◐ '
+				newmsg += '<br/>🔢 '
 			}
 			newmsg += dataHex.join(' ') + '<br/>'
 		}
 		if (toolOptions.logType.includes('ascii')) {
 			let dataAscii = asciidecoder.decode(Uint8Array.from(data))
 			if (toolOptions.logType.includes('&')) {
-				newmsg += '◑ '
+				newmsg += '📄 '
 			}
 			newmsg += dataAscii + '<br/>'
 		}
