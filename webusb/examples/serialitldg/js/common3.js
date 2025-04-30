@@ -937,7 +937,7 @@
 		if (toolOptions.logType.includes('ascii')) {
 			let dataAscii = asciidecoder.decode(Uint8Array.from(data))
 			if (toolOptions.logType.includes('&')) {
-				newmsg += '📄 '
+				newmsg += '🅾️ '
 			}
 			newmsg += dataAscii + '<br/>'
 		}
