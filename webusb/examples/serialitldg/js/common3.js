@@ -275,6 +275,16 @@
 				"hex": true
 			},
 			{
+				"name": "双线握手",
+				"content": "18484320A10702000370",
+				"hex": true
+			},
+			{
+				"name": "单线握手",
+				"content": "18484320A1070200006D",
+				"hex": true
+			}
+			{
 				"name": "PPS-1M",
 				"content": "65031100038F80",
 				"hex": true
@@ -342,6 +352,21 @@
 			{
 				"name": "SetProtectLevel3",
 				"content": "65022C03DD06",
+				"hex": true
+			},
+			{
+        		"name": "ReadProtectLevel",
+        		"content": "65022C556E31",
+        		"hex": true
+    		},
+			{
+				"name": "PCROP建立0609",
+				"content": "650A50555AA506000900F2CE57EF",
+				"hex": true
+			},
+			{
+				"name": "PCROP删除",
+				"content": "650A50AA5AA5FF030000C6786653",
 				"hex": true
 			},
 			{
