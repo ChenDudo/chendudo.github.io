@@ -270,11 +270,6 @@
         name: '小华 ISP 命令集',
         list: [
 			{
-				"name": "Query",
-				"content": "65011065F3",
-				"hex": true
-			},
-			{
 				"name": "双线握手",
 				"content": "18484320A10702000370",
 				"hex": true
@@ -283,7 +278,12 @@
 				"name": "单线握手",
 				"content": "18484320A1070200006D",
 				"hex": true
-			}
+			},
+			{
+				"name": "Query",
+				"content": "65011065F3",
+				"hex": true
+			},
 			{
 				"name": "PPS-1M",
 				"content": "65031100038F80",
