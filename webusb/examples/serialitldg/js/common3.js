@@ -119,37 +119,37 @@
         name: 'Wi-Fi AT 命令集',
         list: [
             {
-                "name": "初始化/清理Wi-Fi驱动程序",
+                "name": "初始化清理Wi-Fi驱动程序",
                 "content": "AT+CWINIT",
                 "hex": false
             },
             {
-                "name": "查询/设置Wi-Fi模式(Sta/SoftAP/all)",
-                "content": "AT+CWMODE",
+                "name": "查设Wi-Fi模式",
+                "content": "AT+CWMODE=1",
                 "hex": false
             },
             {
-                "name": "查询 Wi-Fi 状态和 Wi-Fi 信息",
-                "content": "AT+CWSTATE",
+                "name": "查Wi-Fi状态信息",
+                "content": "AT+CWSTATE?",
                 "hex": false
             },
             {
-                "name": "连接 AP",
+                "name": "连接AP",
                 "content": "AT+CWJAP",
                 "hex": false
             },
             {
-                "name": "查询/设置 Wi-Fi 重连配置",
+                "name": "查/设Wi-Fi重连配置",
                 "content": "AT+CWRECONNCFG",
                 "hex": false
             },
             {
-                "name": "设置 AT+CWLAP 命令扫描结果的属性",
+                "name": "设置CWLAP扫描结果属性",
                 "content": "AT+CWLAPOPT",
                 "hex": false
             },
             {
-                "name": "扫描当前可用的AP",
+                "name": "扫描当前可用AP",
                 "content": "AT+CWLAP",
                 "hex": false
             },
@@ -159,7 +159,7 @@
                 "hex": false
             },
             {
-                "name": "配置ESP32 SoftAP参数",
+                "name": "配置ESP32SoftAP参数",
                 "content": "AT+CWSAP",
                 "hex": false
             },
@@ -169,7 +169,7 @@
                 "hex": false
             },
             {
-                "name": "断开station与ESP32 SoftAP的连接",
+                "name": "断开station与ESP32SoftAP的连接",
                 "content": "AT+CWQIF",
                 "hex": false
             },
@@ -179,7 +179,7 @@
                 "hex": false
             },
             {
-                "name": "查询/设置ESP32SoftAP DHCP分配的IPv4地址范围",
+                "name": "查/设ESP32SoftAP DHCP分配的IPv4地址范围",
                 "content": "AT+CWDHCPS",
                 "hex": false
             },
@@ -366,7 +366,12 @@
 			},
 			{
 				"name": "PCROP删除",
-				"content": "650A50AA5AA5FF030000C6786653",
+				"content": "650250AA7267",
+				"hex": true
+			},
+			{
+				"name": "PCROP查询",
+				"content": "65025000226D",
 				"hex": true
 			},
 			{
@@ -942,10 +947,10 @@
 	//添加日志
 	function addLog(data, isReceive = true) {
 		let classname = 'text-primary'
-		let form = "» "
+		let form = "TX» "
 		if (isReceive) {
 			classname = 'text-success'
-			form = "« "
+			form = "RX« "
 		}
 		newmsg = ''
 		if (toolOptions.logType.includes('hex')) {
