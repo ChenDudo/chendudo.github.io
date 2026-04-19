@@ -271,12 +271,12 @@
         list: [
 			{
 				"name": "双线握手",
-				"content": "18484320A10702000370",
+				"content": "18484300C2010600036F",
 				"hex": true
 			},
 			{
 				"name": "单线握手",
-				"content": "18484320A1070200006D",
+				"content": "18484300C2010600006C",
 				"hex": true
 			},
 			{
@@ -388,7 +388,17 @@
 				"name": "OTP Read",
 				"content": "650629001000000448BA",
 				"hex": true
-			}
+			},
+    		{
+    		    "name": "NVR基地址",
+    		    "content": "650527000010000D09",
+    		    "hex": true
+    		},
+    		{
+    		    "name": "读ID",
+    		    "content": "650629001A000004E666",
+    		    "hex": true
+    		}
 		],
 	},
 ]
